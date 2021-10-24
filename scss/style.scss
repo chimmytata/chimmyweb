@@ -1,3 +1,24 @@
 body {
 	background-color: blueviolet;
 }
+
+header {
+	// 寬度 高度 背景顏色 單位向素(px)
+	width: 300px;
+	height: 250px;
+	background-color: brown;
+}
+
+main {
+	// 寬度 高度 背景顏色
+	width: 600px;
+	height: 450px;
+	background-color: cadetblue;
+}
+
+footer {
+	// 寬度 高度 背景顏色
+	width: 100px;
+	height: 250px;
+	background-color: cornflowerblue;
+}
