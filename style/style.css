@@ -9,11 +9,16 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-  header nav .LuluBtnBox {
+  header {
+    width: 100%;
+  }
+  address,
+  .LuluBtnBox,
+  #LuluIcon {
     display: none;
   }
-  header nav #LuluIcon {
-    display: none;
+  #MenaBtn {
+    background-color: cornflowerblue;
   }
 }
 /*# sourceMappingURL=style.css.map */
