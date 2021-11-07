@@ -9,7 +9,7 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-  header nav .LuluBtnBox, header nav #LuluIcon, footer address {
+  .DN, header nav .LuluBtnBox, header nav #LuluIcon, footer address {
     display: none;
   }
   header {
