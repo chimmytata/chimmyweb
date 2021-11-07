@@ -17,7 +17,7 @@
 // }
 
 // 繼承區（相同樣式）
-.DN {
+%DN {
 	display: none;
 }
 
@@ -28,11 +28,11 @@ header {
 	nav {
 		.LuluBtnBox {
 			// 呼叫繼承物件
-			@extend .DN;
+			@extend %DN;
 		}
 		#LuluIcon {
 			// 呼叫繼承物件
-			@extend .DN;
+			@extend %DN;
 		}
 	}
 }
@@ -40,6 +40,6 @@ header {
 footer {
 	address {
 		// 呼叫繼承物件
-		@extend .DN;
+		@extend %DN;
 	}
 }
