@@ -1,2 +1,2 @@
-*{margin:0 auto;padding:0}@media screen and (max-width: 576px){header{background-color:burlywood}}
+*{margin:0 auto;padding:0}img{width:100%;height:auto}@media screen and (max-width: 576px){header nav .LuluBtnBox{display:none}header nav #LuluIcon{display:none}}
 /*# sourceMappingURL=style.min.css.map */

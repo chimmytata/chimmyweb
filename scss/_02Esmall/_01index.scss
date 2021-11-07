@@ -5,9 +5,12 @@
 header {
 	nav {
 		.LuluBtnBox {
-			ul {
-				background-color: cadetblue;
-			}
+			// 隱藏 display
+			display: none;
+		}
+		#LuluIcon {
+			// 隱藏 display
+			display: none;
 		}
 	}
 }
