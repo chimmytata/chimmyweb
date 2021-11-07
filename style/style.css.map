@@ -4,7 +4,12 @@
     "sources": [
         "../scss/style.scss",
         "../scss/_01Joint.scss",
-        "../scss/_02Esmall/_01index.scss"
+        "../scss/_02Esmall/_01index.scss",
+        "../scss/_03Small/_01index.scss",
+        "../scss/_04Medium/_01index.scss",
+        "../scss/_05Large/_01index.scss",
+        "../scss/_06Xlarge/_01index.scss",
+        "../scss/_07XXlarge/_01index.scss"
     ],
     "names": [],
     "file": "style.css"
