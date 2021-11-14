@@ -13,3 +13,18 @@ img {
 }
 
 $W10: 10%;
+
+// 繼承區（相同樣式）;將 scss 的繼承功能，寫在共用檔內，因為位置編排有誤，故造成 編譯 時出錯
+/*
+You may not @extend an outer selector from within @media.
+You may only @extend selectors within the same directive.
+無法由 @media （媒體判斷）去呼叫「外部連結」
+*/
+%DN {
+	display: none;
+}
+
+// 撰寫 scss 的「混合函式 mixin」，修正 scss 的繼承功能，無法被 @media 使用的問題
+@mixin DN {
+	display: none;
+}
