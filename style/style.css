@@ -33,7 +33,9 @@ You may only @extend selectors within the same directive.
     background-color: indianred;
   }
   header nav #LuluLogo {
+    width: 80%;
     float: left;
+    background-color: aqua;
   }
   header nav .LuluBtnBox {
     display: none;
@@ -42,6 +44,7 @@ You may only @extend selectors within the same directive.
     display: none;
   }
   header nav #MenaBtn {
+    width: 20%;
     float: left;
   }
   header nav .Clear {
