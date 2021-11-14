@@ -16,11 +16,33 @@
 // 	background-color: cornflowerblue;
 // }
 
+// 目前使用的單位（數值）是 百分比（%）；網頁的固定單位--像素 px
+
 header {
 	// 寬度
 	width: $W10 * 10;
+	height: 60px;
+	background-color: hotpink;
 
 	nav {
+		/*
+		浮動對齊的問題 float
+		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
+		2. nav 的父框架 header ，高度消失（展開）
+		解決方式
+		1. nav 的父框架 header ，給予高度；或是 nav 給予高度
+		2. 清除浮動狀態，由 nav 設定
+		*/
+		width: $W10 * 10;
+		background-color: indianred;
+		// 解決方法一：給予高度：二擇一，寫入 header 或是 nav
+		// height: 65px;
+
+		// 靠左對齊（與 MenaBtn 同一行）
+		#LuluLogo {
+			// 浮點對齊法：靠左對齊 float:left
+			float: left;
+		}
 		.LuluBtnBox {
 			// 呼叫 混合函式
 			@include DN;
@@ -28,6 +50,11 @@ header {
 		#LuluIcon {
 			// 呼叫 混合函式
 			@include DN;
+		}
+		// 靠左對齊（與 LuluLogo 同一行）
+		#MenaBtn {
+			// 浮點對齊法：靠左對齊 float:left
+			float: left;
 		}
 	}
 }

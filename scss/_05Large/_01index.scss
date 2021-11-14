@@ -10,8 +10,12 @@ header {
 
 	nav {
 		.LuluBtnBox {
+			// 開啟隱藏物件
+			@include OB;
 		}
 		#LuluIcon {
+			// 開啟隱藏物件
+			@include OB;
 		}
 		#MenaBtn {
 			@include DN;

@@ -17,12 +17,32 @@ You may only @extend selectors within the same directive.
 @media screen and (max-width: 576px) {
   header {
     width: 100%;
+    height: 60px;
+    background-color: hotpink;
+  }
+  header nav {
+    /*
+		浮動對齊的問題 float
+		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
+		2. nav 的父框架 header ，高度消失（展開）
+		解決方式
+		1. nav 的父框架 header ，給予高度；或是 nav 給予高度
+		2. 清除浮動狀態，由 nav 設定
+		*/
+    width: 100%;
+    background-color: indianred;
+  }
+  header nav #LuluLogo {
+    float: left;
   }
   header nav .LuluBtnBox {
     display: none;
   }
   header nav #LuluIcon {
     display: none;
+  }
+  header nav #MenaBtn {
+    float: left;
   }
   footer address {
     display: none;
@@ -69,6 +89,50 @@ You may only @extend selectors within the same directive.
   header {
     width: 100%;
     background-color: darkslateblue;
+  }
+  header nav .LuluBtnBox {
+    display: block;
+  }
+  header nav #LuluIcon {
+    display: block;
+  }
+  header nav #MenaBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+    background-color: #3d8b64;
+  }
+  header nav .LuluBtnBox {
+    display: block;
+  }
+  header nav #LuluIcon {
+    display: block;
+  }
+  header nav #MenaBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    width: 100%;
+    background-color: #b13c9d;
+  }
+  header nav .LuluBtnBox {
+    display: block;
+  }
+  header nav #LuluIcon {
+    display: block;
   }
   header nav #MenaBtn {
     display: none;
