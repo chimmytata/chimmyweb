@@ -33,7 +33,13 @@ header {
 		2. 清除浮動狀態，由 nav 設定
 		*/
 		width: $W10 * 10;
+
+		// 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
+		// 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；可式裝置的高度，計算出實際高度；依照裝置的高度計算）
+		height: 10vh;
+
 		background-color: indianred;
+
 		// 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
 
 		// 靠左對齊（與 MenaBtn 同一行）
@@ -41,19 +47,23 @@ header {
 			// 浮點對齊法：靠左對齊 float:left
 			float: left;
 		}
+
 		.LuluBtnBox {
 			// 呼叫 混合函式
 			@include DN;
 		}
+
 		#LuluIcon {
 			// 呼叫 混合函式
 			@include DN;
 		}
+
 		// 靠左對齊（與 LuluLogo 同一行）
 		#MenaBtn {
 			// 浮點對齊法：靠左對齊 float:left
 			float: left;
 		}
+
 		.Clear {
 			@include ClearFloat;
 		}
