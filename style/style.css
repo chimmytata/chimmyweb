@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0 auto;
   padding: 0;
@@ -8,12 +9,72 @@ img {
   height: auto;
 }
 
+/*
+You may not @extend an outer selector from within @media.
+You may only @extend selectors within the same directive.
+無法由 @media （媒體判斷）去呼叫「外部連結」
+*/
 @media screen and (max-width: 576px) {
-  header nav .LuluBtnBox, header nav #LuluIcon, footer address {
-    display: none;
-  }
   header {
     width: 100%;
+  }
+  header nav .LuluBtnBox {
+    display: none;
+  }
+  header nav #LuluIcon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    width: 100%;
+    background-color: cadetblue;
+  }
+  header nav .LuluBtnBox {
+    display: none;
+  }
+  header nav #LuluIcon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    background-color: deeppink;
+  }
+  header nav .LuluBtnBox {
+    display: none;
+  }
+  header nav #LuluIcon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*
+大平板裝置的 LuluBtnBox 與 LuluIcon 取消「隱藏顯示」，但無法讀取，
+因為，媒體判斷的順序是由 小尺寸 到 大尺寸，故 大尺寸 沒有下達任何語法時，會直接直判讀製小尺寸
+*/
+  header {
+    width: 100%;
+    background-color: darkslateblue;
+  }
+  header nav #MenaBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

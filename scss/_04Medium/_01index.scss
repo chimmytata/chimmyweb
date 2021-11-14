@@ -1,0 +1,24 @@
+header {
+	// 寬度
+	width: $W10 * 10;
+
+	background-color: deeppink;
+
+	nav {
+		.LuluBtnBox {
+			// 呼叫 混合函式
+			@include DN;
+		}
+		#LuluIcon {
+			// 呼叫 混合函式
+			@include DN;
+		}
+	}
+}
+
+footer {
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
+}

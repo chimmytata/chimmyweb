@@ -16,30 +16,25 @@
 // 	background-color: cornflowerblue;
 // }
 
-// 繼承區（相同樣式）
-%DN {
-	display: none;
-}
-
 header {
 	// 寬度
 	width: $W10 * 10;
 
 	nav {
 		.LuluBtnBox {
-			// 呼叫繼承物件
-			@extend %DN;
+			// 呼叫 混合函式
+			@include DN;
 		}
 		#LuluIcon {
-			// 呼叫繼承物件
-			@extend %DN;
+			// 呼叫 混合函式
+			@include DN;
 		}
 	}
 }
 
 footer {
 	address {
-		// 呼叫繼承物件
-		@extend %DN;
+		// 呼叫 混合函式
+		@include DN;
 	}
 }

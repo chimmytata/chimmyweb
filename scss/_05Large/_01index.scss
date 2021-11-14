@@ -1,0 +1,27 @@
+/*
+大平板裝置的 LuluBtnBox 與 LuluIcon 取消「隱藏顯示」，但無法讀取，
+因為，媒體判斷的順序是由 小尺寸 到 大尺寸，故 大尺寸 沒有下達任何語法時，會直接直判讀製小尺寸
+*/
+header {
+	// 寬度
+	width: $W10 * 10;
+
+	background-color: darkslateblue;
+
+	nav {
+		.LuluBtnBox {
+		}
+		#LuluIcon {
+		}
+		#MenaBtn {
+			@include DN;
+		}
+	}
+}
+
+footer {
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
+}
