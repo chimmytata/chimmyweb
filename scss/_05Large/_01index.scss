@@ -15,15 +15,15 @@ header {
         // 換行
         flex-wrap: wrap;
 
+        @include LIW(7, 5vw);
+
         //  Logo 寬度 + Icon 寬度 = 總寬度 100vw （100%）
         #LuluLogo {
-            width: $W10 * 7;
         }
 
         #LuluIcon {
             // 開啟隱藏物件
             @include OB;
-            width: $W10 * 3;
 
             // 隱藏項目符號
             @include DNli;

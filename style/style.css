@@ -17,7 +17,7 @@ You may only @extend selectors within the same directive.
 @media screen and (max-width: 576px) {
   header {
     width: 100vw;
-    background-color: hotpink;
+    background-color: #8cff69;
   }
   header nav {
     /*
@@ -160,11 +160,13 @@ You may only @extend selectors within the same directive.
         flex-wrap: wrap;
   }
   header nav #LuluLogo {
-    width: 70vw;
+    width: 75vw;
+  }
+  header nav #LuluIcon {
+    width: 25vw;
   }
   header nav #LuluIcon {
     display: block;
-    width: 30vw;
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
