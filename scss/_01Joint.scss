@@ -31,15 +31,18 @@ You may only @extend selectors within the same directive.
     // 計算區 1. 設變數 （承載值得物件名稱）$WM=倍數 $WA=加的數值
     // $LogoW: 10 * 8 + 5;
     $LogoW: $W10 * $WM + $WA;
+
     // MenaBtn寬度 = 父框架的總寬度（100） - Logo寬度（85）
     // $MenaBtnW: 100 - 85
-    $MenaBtnW: $W10 * 10 - $LogoW // 連動 計算寬度 Logo 與 MenaBtn
-        // 呼叫 id （標籤 或 id 或 class）
-        #LuluLogo {
+    $MenaBtnW: $W10 * 10 - $LogoW;
+
+    // 連動 計算寬度 Logo 與 MenaBtn
+
+    // 呼叫 id （標籤 或 id 或 class）
+    #LuluLogo {
         // 寬度
         width: $LogoW;
     }
-
     #MenaBtn {
         // 寬度
         width: $MenaBtnW;

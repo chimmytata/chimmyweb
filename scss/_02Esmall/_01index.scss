@@ -42,12 +42,14 @@ header {
 
         // 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
 
+        // 單位不同無法計算，所以將原本5%，改成同一單位 vw
+        @include LBW(8, 5vw);
+
         // 靠左對齊（與 MenaBtn 同一行）
         #LuluLogo {
             // 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
             // width: $W10 * 8 + 5%;
-            // 單位不同無法計算，所以將原本5%，改成同一單位 vw
-            @include LBW(8, 5vw);
+
             // 浮點對齊法：靠左對齊 float:left
             float: left;
             background-color: aqua;
@@ -65,9 +67,6 @@ header {
 
         // 靠左對齊（與 LuluLogo 同一行）
         #MenaBtn {
-            // 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
-            // 單位不同無法計算，所以將原本5%，改成同一單位 vw
-            width: $W10 * 1 + 5vw;
             // 浮點對齊法：靠左對齊 float:left
             float: left;
         }
