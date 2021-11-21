@@ -1,27 +1,29 @@
 header {
-	// 寬度
-	width: $W10 * 10;
+    // 寬度
+    width: $W10 * 10;
 
-	background-color: rgb(61, 139, 100);
+    background-color: rgb(61, 139, 100);
 
-	nav {
-		.LuluBtnBox {
-			// 開啟隱藏物件
-			@include OB;
-		}
-		#LuluIcon {
-			// 開啟隱藏物件
-			@include OB;
-		}
-		#MenaBtn {
-			@include DN;
-		}
-	}
+    nav {
+        #LuluIcon {
+            // 開啟隱藏物件
+            @include OB;
+        }
+
+        .LuluBtnBox {
+            // 開啟隱藏物件
+            @include OB;
+        }
+
+        #MenaBtn {
+            @include DN;
+        }
+    }
 }
 
 footer {
-	address {
-		// 呼叫 混合函式
-		@include DN;
-	}
+    address {
+        // 呼叫 混合函式
+        @include DN;
+    }
 }

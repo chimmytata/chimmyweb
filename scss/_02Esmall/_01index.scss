@@ -19,12 +19,12 @@
 // 目前使用的單位（數值）是 百分比（%）；網頁的固定單位--像素 px
 
 header {
-	// 寬度
-	width: $W10 * 10;
-	background-color: hotpink;
+    // 寬度
+    width: $W10 * 10;
+    background-color: hotpink;
 
-	nav {
-		/*
+    nav {
+        /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
 		2. nav 的父框架 header ，高度消失（展開）
@@ -33,52 +33,54 @@ header {
 		2. 清除浮動狀態，由 nav 設定
 		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
 		*/
-		width: $W10 * 10;
+        width: $W10 * 10;
 
-		// 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
-		// 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；螢幕可式範圍高度的百分比，計算出實際高度；依照裝置的高度計算）
+        // 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
+        // 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；螢幕可式範圍高度的百分比，計算出實際高度；依照裝置的高度計算）
 
-		background-color: indianred;
+        background-color: indianred;
 
-		// 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
+        // 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
 
-		// 靠左對齊（與 MenaBtn 同一行）
-		#LuluLogo {
-			// 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
-			// width: $W10 * 8 + 5%;
-			@include LBW(8, 5%);
-			// 浮點對齊法：靠左對齊 float:left
-			float: left;
-			background-color: aqua;
-		}
+        // 靠左對齊（與 MenaBtn 同一行）
+        #LuluLogo {
+            // 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
+            // width: $W10 * 8 + 5%;
+            // 單位不同無法計算，所以將原本5%，改成同一單位 vw
+            @include LBW(8, 5vw);
+            // 浮點對齊法：靠左對齊 float:left
+            float: left;
+            background-color: aqua;
+        }
 
-		.LuluBtnBox {
-			// 呼叫 混合函式
-			@include DN;
-		}
+        #LuluIcon {
+            // 呼叫 混合函式
+            @include DN;
+        }
 
-		#LuluIcon {
-			// 呼叫 混合函式
-			@include DN;
-		}
+        .LuluBtnBox {
+            // 呼叫 混合函式
+            @include DN;
+        }
 
-		// 靠左對齊（與 LuluLogo 同一行）
-		#MenaBtn {
-			// 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
-			width: $W10 * 1 + 5%;
-			// 浮點對齊法：靠左對齊 float:left
-			float: left;
-		}
+        // 靠左對齊（與 LuluLogo 同一行）
+        #MenaBtn {
+            // 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
+            // 單位不同無法計算，所以將原本5%，改成同一單位 vw
+            width: $W10 * 1 + 5vw;
+            // 浮點對齊法：靠左對齊 float:left
+            float: left;
+        }
 
-		.Clear {
-			@include ClearFloat;
-		}
-	}
+        .Clear {
+            @include ClearFloat;
+        }
+    }
 }
 
 footer {
-	address {
-		// 呼叫 混合函式
-		@include DN;
-	}
+    address {
+        // 呼叫 混合函式
+        @include DN;
+    }
 }

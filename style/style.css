@@ -16,7 +16,7 @@ You may only @extend selectors within the same directive.
 */
 @media screen and (max-width: 576px) {
   header {
-    width: 100%;
+    width: 100vw;
     background-color: hotpink;
   }
   header nav {
@@ -29,22 +29,22 @@ You may only @extend selectors within the same directive.
 		2. 清除浮動狀態，由 nav 設定
 		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
 		*/
-    width: 100%;
+    width: 100vw;
     background-color: indianred;
   }
   header nav #LuluLogo {
-    width: 85%;
+    width: 85vw;
     float: left;
     background-color: aqua;
-  }
-  header nav .LuluBtnBox {
-    display: none;
   }
   header nav #LuluIcon {
     display: none;
   }
+  header nav .LuluBtnBox {
+    display: none;
+  }
   header nav #MenaBtn {
-    width: 15%;
+    width: 15vw;
     float: left;
   }
   header nav .Clear {
@@ -57,14 +57,39 @@ You may only @extend selectors within the same directive.
 
 @media screen and (min-width: 576px) {
   header {
-    width: 100%;
-    background-color: cadetblue;
+    width: 100vw;
+    background-color: hotpink;
+  }
+  header nav {
+    /*
+		浮動對齊的問題 float
+		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
+		2. nav 的父框架 header ，高度消失（展開）
+		解決方式
+		1. nav 的父框架 header ，給予高度；或是 nav 給予高度
+		2. 清除浮動狀態，由 nav 設定
+		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
+		*/
+    width: 100vw;
+    background-color: #a5cd5c;
+  }
+  header nav #LuluLogo {
+    width: 85vw;
+    float: left;
+    background-color: aqua;
+  }
+  header nav #LuluIcon {
+    display: none;
   }
   header nav .LuluBtnBox {
     display: none;
   }
-  header nav #LuluIcon {
-    display: none;
+  header nav #MenaBtn {
+    width: 15vw;
+    float: left;
+  }
+  header nav .Clear {
+    clear: both;
   }
   footer address {
     display: none;
@@ -73,14 +98,37 @@ You may only @extend selectors within the same directive.
 
 @media screen and (min-width: 768px) {
   header {
-    width: 100%;
-    background-color: deeppink;
+    width: 100vw;
+    background-color: hotpink;
+  }
+  header nav {
+    /*
+		浮動對齊的問題 float
+		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
+		2. nav 的父框架 header ，高度消失（展開）
+		解決方式
+		1. nav 的父框架 header ，給予高度；或是 nav 給予高度
+		2. 清除浮動狀態，由 nav 設定
+		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
+		*/
+    width: 100vw;
+    background-color: #875ccd;
+  }
+  header nav #LuluLogo {
+    float: left;
+    background-color: aqua;
+  }
+  header nav #LuluIcon {
+    display: none;
   }
   header nav .LuluBtnBox {
     display: none;
   }
-  header nav #LuluIcon {
-    display: none;
+  header nav #MenaBtn {
+    float: left;
+  }
+  header nav .Clear {
+    clear: both;
   }
   footer address {
     display: none;
@@ -93,14 +141,37 @@ You may only @extend selectors within the same directive.
 因為，媒體判斷的順序是由 小尺寸 到 大尺寸，故 大尺寸 沒有下達任何語法時，會直接直判讀製小尺寸
 */
   header {
-    width: 100%;
+    width: 100vw;
     background-color: darkslateblue;
   }
-  header nav .LuluBtnBox {
-    display: block;
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header nav #LuluLogo {
+    width: 70vw;
   }
   header nav #LuluIcon {
     display: block;
+    width: 30vw;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .LuluBtnBox {
+    display: block;
+    width: 100vw;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .LuluBtnBox ul {
+    display: none;
   }
   header nav #MenaBtn {
     display: none;
@@ -112,13 +183,13 @@ You may only @extend selectors within the same directive.
 
 @media screen and (min-width: 1200px) {
   header {
-    width: 100%;
+    width: 100vw;
     background-color: #3d8b64;
   }
-  header nav .LuluBtnBox {
+  header nav #LuluIcon {
     display: block;
   }
-  header nav #LuluIcon {
+  header nav .LuluBtnBox {
     display: block;
   }
   header nav #MenaBtn {
@@ -131,13 +202,13 @@ You may only @extend selectors within the same directive.
 
 @media screen and (min-width: 1400px) {
   header {
-    width: 100%;
+    width: 100vw;
     background-color: #b13c9d;
   }
-  header nav .LuluBtnBox {
+  header nav #LuluIcon {
     display: block;
   }
-  header nav #LuluIcon {
+  header nav .LuluBtnBox {
     display: block;
   }
   header nav #MenaBtn {

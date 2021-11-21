@@ -1,18 +1,19 @@
 // 頁面（瀏覽器）與物件的間距：外間距--上下為0，左右自動；內間距--上下左右為0；設定在「*」（通用選擇器）
 * {
-	// 外間距--上下為0，左右自動 margin；若物件寬度小於100%時，物件將會自動 垂直 置中
-	margin: 0 auto;
-	// 內間距--上下左右為0 padding
-	padding: 0;
+    // 外間距--上下為0，左右自動 margin；若物件寬度小於100%時，物件將會自動 垂直 置中
+    margin: 0 auto;
+    // 內間距--上下左右為0 padding
+    padding: 0;
 }
 // 圖片等比控制
 img {
-	// 寬度為100%;高度自動
-	width: 100%;
-	height: auto;
+    // 寬度為100%;高度自動
+    width: 100%;
+    height: auto;
 }
 
-$W10: 10%;
+// 變數區
+$W10: 10vw;
 
 // 繼承區（相同樣式）;將 scss 的繼承功能，寫在共用檔內，因為位置編排有誤，故造成 編譯 時出錯
 /*
@@ -21,28 +22,48 @@ You may only @extend selectors within the same directive.
 無法由 @media （媒體判斷）去呼叫「外部連結」
 */
 %DN {
-	display: none;
+    display: none;
 }
 
 // 計算區
-// 計算 header Logo 與 BtnBox 之間的寬度
+// 計算 header Logo 與 MenaBtn 之間的寬度 手機裝置
 @mixin LBW($WM, $WA) {
-	width: $W10 * $WM + $WA;
+    // 計算區 1. 設變數 （承載值得物件名稱）$WM=倍數 $WA=加的數值
+    // $LogoW: 10 * 8 + 5;
+    $LogoW: $W10 * $WM + $WA;
+    // MenaBtn寬度 = 父框架的總寬度（100） - Logo寬度（85）
+    // $MenaBtnW: 100 - 85
+    $MenaBtnW: $W10 * 10 - $LogoW // 連動 計算寬度 Logo 與 MenaBtn
+        // 呼叫 id （標籤 或 id 或 class）
+        #LuluLogo {
+        // 寬度
+        width: $LogoW;
+    }
+
+    #MenaBtn {
+        // 寬度
+        width: $MenaBtnW;
+    }
 }
 
 // 撰寫 scss 的「混合函式 mixin」，修正 scss 的繼承功能，無法被 @media 使用的問題
 @mixin DN {
-	display: none;
+    display: none;
 }
 
 // 開啟隱藏物件
 @mixin OB {
-	// 顯示方式：區塊
-	display: block;
+    // 顯示方式：區塊
+    display: block;
 }
 
 // 清除浮動 float
 @mixin ClearFloat {
-	// 清除左右浮動
-	clear: both;
+    // 清除左右浮動
+    clear: both;
+}
+
+// 隱藏項目符號
+@mixin DNli {
+    list-style: none;
 }

@@ -3,29 +3,61 @@
 因為，媒體判斷的順序是由 小尺寸 到 大尺寸，故 大尺寸 沒有下達任何語法時，會直接直判讀製小尺寸
 */
 header {
-	// 寬度
-	width: $W10 * 10;
+    // 寬度
+    width: $W10 * 10;
 
-	background-color: darkslateblue;
+    background-color: darkslateblue;
 
-	nav {
-		.LuluBtnBox {
-			// 開啟隱藏物件
-			@include OB;
-		}
-		#LuluIcon {
-			// 開啟隱藏物件
-			@include OB;
-		}
-		#MenaBtn {
-			@include DN;
-		}
-	}
+    nav {
+        // 彈性布局 flex ；對其物件的父框架
+        // 顯示方式：彈性布局
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
+
+        //  Logo 寬度 + Icon 寬度 = 總寬度 100vw （100%）
+        #LuluLogo {
+            width: $W10 * 7;
+        }
+
+        #LuluIcon {
+            // 開啟隱藏物件
+            @include OB;
+            width: $W10 * 3;
+
+            // 隱藏項目符號
+            @include DNli;
+
+            // 彈性布局
+            display: flex;
+        }
+
+        .LuluBtnBox {
+            // 開啟隱藏物件
+            @include OB;
+            width: $W10 * 10;
+
+            // 隱藏項目符號
+            @include DNli;
+
+            // 隱藏第二層選單
+            ul {
+                @include DN;
+            }
+
+            // 彈性布局
+            display: flex;
+        }
+
+        #MenaBtn {
+            @include DN;
+        }
+    }
 }
 
 footer {
-	address {
-		// 呼叫 混合函式
-		@include DN;
-	}
+    address {
+        // 呼叫 混合函式
+        @include DN;
+    }
 }
