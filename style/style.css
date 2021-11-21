@@ -194,15 +194,6 @@ You may only @extend selectors within the same directive.
     width: 100vw;
     background-color: #3d8b64;
   }
-  header nav #LuluIcon {
-    display: block;
-  }
-  header nav .LuluBtnBox {
-    display: block;
-  }
-  header nav #MenaBtn {
-    display: none;
-  }
   footer address {
     display: none;
   }
@@ -212,15 +203,6 @@ You may only @extend selectors within the same directive.
   header {
     width: 100vw;
     background-color: #b13c9d;
-  }
-  header nav #LuluIcon {
-    display: block;
-  }
-  header nav .LuluBtnBox {
-    display: block;
-  }
-  header nav #MenaBtn {
-    display: none;
   }
   footer address {
     display: none;

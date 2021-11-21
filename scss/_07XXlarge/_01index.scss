@@ -3,22 +3,6 @@ header {
     width: $W10 * 10;
 
     background-color: rgb(177, 60, 157);
-
-    nav {
-        #LuluIcon {
-            // 開啟隱藏物件
-            @include OB;
-        }
-
-        .LuluBtnBox {
-            // 開啟隱藏物件
-            @include OB;
-        }
-
-        #MenaBtn {
-            @include DN;
-        }
-    }
 }
 
 footer {
