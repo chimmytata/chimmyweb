@@ -1,3 +1,23 @@
 #Main {
     background-color: rgb(216, 189, 156);
+
+    #Banner {
+        .LeftBtn,
+        .RightBtn {
+            @include DN;
+        }
+
+        #ImgBox {
+            width: $W10 * 10;
+            @include DNli;
+            background-color: blueviolet;
+
+            li {
+                width: $W10 * 10;
+                float: left;
+                // 定位點 相絕定位
+                position: absolute;
+            }
+        }
+    }
 }
