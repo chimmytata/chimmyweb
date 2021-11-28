@@ -95,7 +95,7 @@ You may only @extend selectors within the same directive.
     background-color: blueviolet;
   }
   #Main #Banner #ImgBox li {
-    width: 100vw;
+    width: 300vw;
     float: left;
     position: absolute;
   }
