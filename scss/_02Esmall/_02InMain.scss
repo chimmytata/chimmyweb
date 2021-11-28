@@ -13,12 +13,14 @@
         }
 
         #ImgBox {
-            width: $W10 * 30;
+            width: $W10 * 10;
             @include DNli;
+            // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh
+            padding-bottom: 40vh;
             background-color: blueviolet;
 
             li {
-                width: $W10 * 30;
+                width: $W10 * 10;
                 float: left;
 
                 // 定位點 絕對定位：1. 單獨呼叫時，原點（x 0, y 0）會位於畫面 (可視範圍）的左上角
@@ -27,6 +29,26 @@
 
                 // 移動圖片位置：因為 不同手機會有不同的中心位置，無法逐一計算，所以要利用 背景圖片的方式修改
                 // margin-left: -315px;
+
+                // 文字大小
+                font-size: 72px;
+                // 文字至中
+                text-align: center;
+
+                // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh
+                padding-bottom: 25vh;
+            }
+
+            .Item01 {
+                width: $W10 * 10;
+                // 背景圖片 輸入../ 意思是返回上層目錄
+                background-image: url(../../img/Banner/005.jpg);
+                // 不重複
+                background-repeat: no-repeat;
+                // 背景圖片 置中對齊
+                background-position: center;
+                // 背景圖片 尺寸
+                background-size: cover;
             }
         }
     }
