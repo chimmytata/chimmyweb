@@ -65,6 +65,41 @@ header {
 }
 
 footer {
+    // 物件之間的距離 vh rem
+    margin-top: 2rem;
+
+    hr {
+        // 水平線與下方距離
+        margin-bottom: 2rem;
+    }
+
+    // 手機板次導覽列
+    nav {
+        // 與下方距離
+        margin-bottom: 2rem;
+
+        ul {
+            // 上下左右至中
+            width: 80%;
+
+            // 彈性布局
+            display: flex;
+
+            // 隱藏項目符號
+            @include DNli;
+
+            background-color: cadetblue;
+        }
+    }
+
+    // 版權宣告
+    p {
+        // 文字至中
+        text-align: center;
+
+        // 與下方距離
+        margin-bottom: 0.7rem;
+    }
     address {
         // 呼叫 混合函式
         @include DN;
