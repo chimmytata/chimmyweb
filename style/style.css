@@ -9,6 +9,10 @@ img {
   height: auto;
 }
 
+/* 
+文字尺寸 單位 px（固定值）　em（百分比，會疊加父框架設定的值） rem（百分比，不會疊加父框架設定的值）
+em 基礎為 1em = 16px ； rem 基礎為 1rem = 16px
+*/
 /*
 You may not @extend an outer selector from within @media.
 You may only @extend selectors within the same directive.
@@ -64,7 +68,7 @@ You may only @extend selectors within the same directive.
     margin-bottom: 2rem;
   }
   footer nav ul {
-    width: 80%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -86,9 +90,23 @@ You may only @extend selectors within the same directive.
     overflow: hidden;
     position: relative;
   }
-  #Main #Banner .LeftBtn,
+  #Main #Banner .Btn {
+    width: 30px;
+    height: 12vh;
+    text-align: center;
+    line-height: 12vh;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 5;
+    top: 14vh;
+  }
+  #Main #Banner .LeftBtn {
+    left: 2.5vw;
+    background-color: chartreuse;
+  }
   #Main #Banner .RightBtn {
-    display: none;
+    right: 2.5vw;
+    background-color: forestgreen;
   }
   #Main #Banner #ImgBox {
     width: 100vw;
@@ -163,7 +181,7 @@ You may only @extend selectors within the same directive.
     margin-bottom: 2rem;
   }
   footer nav ul {
-    width: 80%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

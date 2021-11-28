@@ -7,9 +7,33 @@
         overflow: hidden;
         // 定位點：相對定位
         position: relative;
-        .LeftBtn,
+
+        .Btn {
+            width: 30px;
+            height: 6vh * 2;
+
+            // 水平置中
+            text-align: center;
+            // 垂直置中 高度 = 行距
+            line-height: 6vh * 2;
+
+            font-size: $Trem * 2;
+
+            // 定位點 浮起來 （與移動圖層是同組概念，要先做定位點，才能移動圖層）
+            position: absolute;
+            // 移動階層 (圖層概念)　數值隨便設定　由小至大　但是要記得目前設定的是多少
+            z-index: 5;
+
+            top: 20vh - 6vh;
+        }
+        .LeftBtn {
+            left: 2.5vw;
+            background-color: chartreuse;
+        }
         .RightBtn {
-            @include DN;
+            // 方向 右邊為0（物件靠右對齊）；float 浮點對齊，配合 上下左右 方向推動
+            right: 2.5vw;
+            background-color: forestgreen;
         }
 
         #ImgBox {
