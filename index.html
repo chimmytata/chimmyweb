@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- 網頁語系 繁體中文 -->
 <html lang="zh-tw">
-    <!-- head 瀏覽器專用 meta ( 文件相關資訊 響應式標籤 作者 關鍵字 文字編碼方式) -->
+<!-- head 瀏覽器專用 meta ( 文件相關資訊 響應式標籤 作者 關鍵字 文字編碼方式) -->
+
 <head>
     <!-- 文字編碼方式 萬國碼 -->
     <meta charset="UTF-8">
@@ -14,6 +15,7 @@
     <!-- 網頁標題 (唯一標籤) -->
     <title>購物車</title>
 </head>
+
 <body>
     <!-- html5 響應式網頁架構 id(唯一 #) class(類別 .) 語意式標籤語 -->
     <!-- 頁首header(每頁固定) 主內容main(隨著主題不同而不同，IE瀏覽器不支援) 頁尾footer(每頁固定) 文章(article，IE支援取代 main標籤) -->
@@ -22,7 +24,7 @@
         <nav>
             <!-- 導覽列標籤 nav 項目清單 ul li；商標 標題1(h1) -->
             <h1 id="LuluLogo">Lulu</h1>
-            
+
             <!-- Icon 區塊標籤 div id:icon -->
             <div id="LuluIcon">
                 <li class="LuluMember">會員</li>
@@ -45,7 +47,7 @@
                 <li>SALL</li>
                 <li>門市資訊</li>
             </ul>
-            
+
             <!-- 手機板的按鈕選單 -->
             <div id="MenaBtn">
                 <!-- 設定方法一：直接置入圖片 img ; alt 替代文字（圖片連結失效時）title 提示文字（不重要圖片，可以不用設定） -->
@@ -56,150 +58,150 @@
             <p class="Clear"></p>
         </nav>
     </header>
-    
+
     <article id="Main">
-       <!-- 廣告區塊 div 命名 輪播功能用 iavascript 命名建議用 ID選擇器；css3輪播功能 命名 ID選擇器或是 類別選擇器(class) -->
-       <div id="Banner">
-        <div class="LeftBtn"> 〈 </div>
-        <ul id="ImgBox">
-            <li>
-                <img src="Banner/001.jpg" alt="">
-            </li>
-            <li>
-                <img src="Banner/002.jpg" alt="">
-            </li>
-            <li>
-                <img src="Banner/003.jpg" alt="">
-            </li>
-            <li>
-                <img src="Banner/004.jpg" alt="">
-            </li>
-            <li>
-                <img src="Banner/005.jpg" alt="">
-            </li>
-            <p>
-                <img src="Banner/006.png" alt="">
-            </p>
-        </ul>
-        <div class="RightBtn"> 〉 </div>
-       </div>
+        <!-- 廣告區塊 div 命名 輪播功能用 iavascript 命名建議用 ID選擇器；css3輪播功能 命名 ID選擇器或是 類別選擇器(class) -->
+        <div id="Banner">
+            <div class="LeftBtn"> 〈 </div>
+            <ul id="ImgBox">
+                <li>
+                    <img src="img/Banner/001.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/Banner/002.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/Banner/003.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/Banner/004.jpg" alt="">
+                </li>
+                <li>
+                    <img src="img/Banner/005.jpg" alt="">
+                </li>
+                <p>
+                    <img src="img/Banner/006.png" alt="">
+                </p>
+            </ul>
+            <div class="RightBtn"> 〉 </div>
+        </div>
 
-       <!-- 新品上市 熱銷到貨 -->
-       <article id="NewCommodity">
-        <h1>新品上市</h1>
-        <!-- 區段 section -->
-        <section class="NCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+        <!-- 新品上市 熱銷到貨 -->
+        <article id="NewCommodity">
+            <h1>新品上市</h1>
+            <!-- 區段 section -->
+            <section class="NCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <ul>
                     <li class="Love">我的最愛</li>
                     <li class="Car">購物車</li>
                 </ul>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-            <ul>
-                <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
-                <li class="BargainPrice">特價<span>800</span>元</li>
-            </ul>
-        </section>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+                <ul>
+                    <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
+                    <li class="BargainPrice">特價<span>800</span>元</li>
+                </ul>
+            </section>
 
-        <section class="NCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+            <section class="NCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <ul>
                     <li class="Love">我的最愛</li>
                     <li class="Car">購物車</li>
                 </ul>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-            <ul>
-                <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
-                <li class="BargainPrice">特價<span>800</span>元</li>
-            </ul>
-        </section>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+                <ul>
+                    <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
+                    <li class="BargainPrice">特價<span>800</span>元</li>
+                </ul>
+            </section>
 
-        <section class="NCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+            <section class="NCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <ul>
                     <li class="Love">我的最愛</li>
                     <li class="Car">購物車</li>
                 </ul>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-            <ul>
-                <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
-                <li class="BargainPrice">特價<span>800</span>元</li>
-            </ul>
-        </section>
-        
-        <section class="NCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+                <ul>
+                    <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
+                    <li class="BargainPrice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+
+            <section class="NCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <ul>
                     <li class="Love">我的最愛</li>
                     <li class="Car">購物車</li>
                 </ul>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-            <ul>
-                <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
-                <li class="BargainPrice">特價<span>800</span>元</li>
-            </ul>
-        </section>
-       </article>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+                <ul>
+                    <li class="OriginalPrice">原價<span><s>1,000</s></span>元</li>
+                    <li class="BargainPrice">特價<span>800</span>元</li>
+                </ul>
+            </section>
+        </article>
 
-       <article id="Share">
-        <h1>風格企劃</h1>
-        <!-- 區段 section -->
-        <section class="SCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+        <article id="Share">
+            <h1>風格企劃</h1>
+            <!-- 區段 section -->
+            <section class="SCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <li class="LineID">聯絡客服</li>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-        </section>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+            </section>
 
-        <section class="SCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+            <section class="SCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <li class="LineID">聯絡客服</li>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-        </section>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+            </section>
 
-        <section class="SCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+            <section class="SCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <li class="LineID">聯絡客服</li>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-        </section>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+            </section>
 
-        <section class="SCommodity">
-            <p class="Images">商品圖片</p>
-            <p class="LName">
+            <section class="SCommodity">
+                <p class="Images">商品圖片</p>
+                <p class="LName">
                 <h3>商品名稱</h3>
                 <li class="LineID">聯絡客服</li>
-            </p>
-            <!-- 螢光標記 mark 刪除線 s-->
-            <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
-        </section>
-       </article>
+                </p>
+                <!-- 螢光標記 mark 刪除線 s-->
+                <p class="Brief">商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計</p>
+            </section>
+        </article>
     </article>
 
     <footer>
@@ -219,11 +221,11 @@
             </ul>
         </nav>
 
-         <!-- 擁有者資訊 聯絡資訊 建議瀏覽器解析度 瀏覽人數(比較少用，資料庫運作) 版權聲明 連結：隱私權政策 網站安全政策 服務條款 商品的次選單 -->
+        <!-- 擁有者資訊 聯絡資訊 建議瀏覽器解析度 瀏覽人數(比較少用，資料庫運作) 版權聲明 連結：隱私權政策 網站安全政策 服務條款 商品的次選單 -->
         <!-- 段落標籤 p ;行內範圍 span(不會另外換行)-->
         <p>Lulu版權宣告&copy;2020 - <span id="Year">2021</span></p>
 
-        
+
         <!-- 聯絡資訊 address 地址、客服電話、E-mail、LineID、FB、Google地圖 -->
         <address>
             <p class="Address">彰化縣</p>
@@ -232,7 +234,8 @@
             <p class="LineID">LineID</p>
             <p class="FB">FB</p>
             <p class="GoogleMap">地圖</p>
-           </address>
+        </address>
     </footer>
 </body>
+
 </html>
