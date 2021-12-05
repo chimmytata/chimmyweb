@@ -40,7 +40,7 @@ You may only @extend selectors within the same directive.
 
     // MenaBtn寬度 = 父框架的總寬度（100） - Logo寬度（85）
     // $MenaBtnW: 100 - 85
-    $MenaBtnW: $W10 * 10 - $LogoW;
+    $MenuBtnW: $W10 * 10 - $LogoW;
 
     // 連動 計算寬度 Logo 與 MenaBtn
 
@@ -49,9 +49,9 @@ You may only @extend selectors within the same directive.
         // 寬度
         width: $LogoW;
     }
-    #MenaBtn {
+    #MenuBtn {
         // 寬度
-        width: $MenaBtnW;
+        width: $MenuBtnW;
     }
 }
 
@@ -108,6 +108,22 @@ You may only @extend selectors within the same directive.
     // 解答：scss提供的語法，插值寫法（基於 javascript 的 es6 語法），#{ 自訂名稱（只能是英文及數字）}，例如：#{$Image}，寫在路徑上
 
     width: $W10 * 10;
+    // 不重複
+    background-repeat: no-repeat;
+    // 背景圖片 置中對齊
+    background-position: $PosiTion;
+    // 背景圖片 尺寸
+    background-size: $Size;
+    // 背景圖片 輸入../ 意思是返回上層目錄
+    background-image: url(../../img/#{$Material}/#{$Image});
+}
+
+// 手機版選單
+@mixin PhoneMenu($PosiTion, $Size, $Material, $Image) {
+    // 變數設定 1.對齊 $PosiTion  2.尺寸 $Size  3.資料夾位置 $Material ; 圖片 $Image
+    // 問題：路徑無法直接讀取變數名稱，這一串→url(../../img/Banner/005.jpg)
+    // 解答：scss提供的語法，插值寫法（基於 javascript 的 es6 語法），#{ 自訂名稱（只能是英文及數字）}，例如：#{$Image}，寫在路徑上
+
     // 不重複
     background-repeat: no-repeat;
     // 背景圖片 置中對齊
