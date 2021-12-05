@@ -1,5 +1,5 @@
 #Main {
-    background-color: rgb(216, 189, 156);
+    background-color: rgb(175, 216, 156);
 
     #Banner {
         width: $W10 * 10;
@@ -44,10 +44,9 @@
         #ImgBox {
             width: $W10 * 10;
             @include DNli;
-            // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh（會隨著裝置而改變）例如：800px * 26vh = 208px；固定值 px
-            // padding-bottom: 40vh;
-            padding-bottom: 350px;
-            background-color: blueviolet;
+            // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh
+            padding-bottom: 39vh;
+            background-color: rgb(43, 107, 226);
 
             li {
                 width: $W10 * 10;
@@ -65,9 +64,8 @@
                 // 文字至中
                 text-align: center;
 
-                // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh（會隨著裝置而改變）例如：800px * 26vh = 208px；固定值 px
-                // padding-bottom: 25vh;
-                padding-bottom: 250px;
+                // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh
+                padding-bottom: 25vh;
             }
 
             .Item01 {
