@@ -92,13 +92,13 @@ You may only @extend selectors within the same directive.
   }
   #Main #Banner .Btn {
     width: 20px;
-    height: 12vh;
+    height: 95px;
     text-align: center;
-    line-height: 12vh;
+    line-height: 95px;
     font-size: 1.2rem;
     position: absolute;
     z-index: 5;
-    top: 14vh;
+    top: 120px;
     border-radius: 15px;
   }
   #Main #Banner .LeftBtn {
@@ -112,7 +112,7 @@ You may only @extend selectors within the same directive.
   #Main #Banner #ImgBox {
     width: 100vw;
     list-style: none;
-    padding-bottom: 350px;
+    padding-bottom: 335px;
     background-color: blueviolet;
   }
   #Main #Banner #ImgBox li {
@@ -225,7 +225,7 @@ You may only @extend selectors within the same directive.
     display: none;
   }
   #Main {
-    background-color: #afd89c;
+    background-color: #d8b49c;
   }
   #Main #Banner {
     width: 100vw;
@@ -234,13 +234,13 @@ You may only @extend selectors within the same directive.
   }
   #Main #Banner .Btn {
     width: 20px;
-    height: 12vh;
+    height: 95px;
     text-align: center;
-    line-height: 12vh;
+    line-height: 95px;
     font-size: 1.2rem;
     position: absolute;
     z-index: 5;
-    top: 14vh;
+    top: 145px;
     border-radius: 15px;
   }
   #Main #Banner .LeftBtn {
@@ -254,8 +254,8 @@ You may only @extend selectors within the same directive.
   #Main #Banner #ImgBox {
     width: 100vw;
     list-style: none;
-    padding-bottom: 39vh;
-    background-color: #2b6be2;
+    padding-bottom: 385px;
+    background-color: #e22b62;
   }
   #Main #Banner #ImgBox li {
     width: 100vw;
@@ -263,7 +263,7 @@ You may only @extend selectors within the same directive.
     position: absolute;
     font-size: 72px;
     text-align: center;
-    padding-bottom: 25vh;
+    padding-bottom: 295px;
   }
   #Main #Banner #ImgBox .Item01 {
     width: 100vw;
@@ -338,82 +338,6 @@ You may only @extend selectors within the same directive.
   }
   footer address {
     display: none;
-  }
-  #Main {
-    background-color: #9cd8ce;
-  }
-  #Main #Banner {
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-  }
-  #Main #Banner .Btn {
-    width: 20px;
-    height: 12vh;
-    text-align: center;
-    line-height: 12vh;
-    font-size: 1.2rem;
-    position: absolute;
-    z-index: 5;
-    top: 14vh;
-    border-radius: 15px;
-  }
-  #Main #Banner .LeftBtn {
-    left: 2.5vw;
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-  #Main #Banner .RightBtn {
-    right: 2.5vw;
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-  #Main #Banner #ImgBox {
-    width: 100vw;
-    list-style: none;
-    padding-bottom: 39vh;
-    background-color: #b1e22b;
-  }
-  #Main #Banner #ImgBox li {
-    width: 100vw;
-    float: left;
-    position: absolute;
-    font-size: 72px;
-    text-align: center;
-    padding-bottom: 25vh;
-  }
-  #Main #Banner #ImgBox .Item01 {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../img/Banner/005.jpg);
-  }
-  #Main #Banner #ImgBox .Item02 {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../img/Banner/004.jpg);
-  }
-  #Main #Banner #ImgBox .Item03 {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../img/Banner/003.jpg);
-  }
-  #Main #Banner #ImgBox .Item04 {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../img/Banner/002.jpg);
-  }
-  #Main #Banner #ImgBox .Item05 {
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(../../img/Banner/001.jpg);
   }
 }
 

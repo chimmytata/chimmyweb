@@ -8,14 +8,19 @@
         // 定位點：相對定位
         position: relative;
 
+        // 連動相差值 ImgBox 及 Li 高度相差值；及連動 Btn 的高度
+        $ImgPadding: 335px;
+        // 父框架的padding 335px - 子框架的padding 250px = 相差值 $Differ
+        $Differ: 85px;
+
         .Btn {
             width: 20px;
-            height: 6vh * 2;
+            height: 95px;
 
             // 水平置中
             text-align: center;
             // 垂直置中 高度 = 行距
-            line-height: 6vh * 2;
+            line-height: 95px;
 
             font-size: $Trem * 1.2;
 
@@ -24,7 +29,8 @@
             // 移動階層 (圖層概念)　數值隨便設定　由小至大　但是要記得目前設定的是多少
             z-index: 5;
 
-            top: 20vh - 6vh;
+            // 左右按鈕，物件往下推算高度：（物件的父框架 / 2）-（按鈕的高度 / 2）
+            top: ($ImgPadding / 2)- (95px / 2);
 
             // 圓角矩形
             @include Rounded(15);
@@ -44,9 +50,11 @@
         #ImgBox {
             width: $W10 * 10;
             @include DNli;
+
             // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh（會隨著裝置而改變）例如：800px * 26vh = 208px；固定值 px
             // padding-bottom: 40vh;
-            padding-bottom: 350px;
+            // padding-bottom: 335px;
+            padding-bottom: $ImgPadding;
             background-color: blueviolet;
 
             li {
@@ -67,7 +75,9 @@
 
                 // 內間距 設定 下方間距，當成圖片的高度，單位為 % 或 vh（會隨著裝置而改變）例如：800px * 26vh = 208px；固定值 px
                 // padding-bottom: 25vh;
-                padding-bottom: 250px;
+                // padding-bottom: 250px;
+                // 子框架的padding = 父框架的padding - 相差值 $Differ
+                padding-bottom: $ImgPadding - $Differ;
             }
 
             .Item01 {
