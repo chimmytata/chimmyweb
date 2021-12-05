@@ -69,6 +69,12 @@ header {
         #MenaBtn {
             // 浮點對齊法：靠左對齊 float:left
             float: left;
+
+            // 固定圖片高度，讓 頁首的高度 不隨著高度而變動
+            img {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         .Clear {
