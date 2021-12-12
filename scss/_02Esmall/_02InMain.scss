@@ -137,7 +137,9 @@
             // 外間距
             margin: {
                 bottom: 20px;
-            };
+            }
+            // // 重新定位原點 父框架設定 定位點：相對值；子框架設定 定位點：絕對值
+            // position: relative;
             // 背景顏色
             background-color: azure;
 
@@ -150,21 +152,65 @@
                 flex-wrap: wrap;
                 // 隱藏項目符號
                 @include DNli;
-                background-color: rgb(212, 195, 126);
+                // 字距（不要打太大，例如 5px）
+                letter-spacing: 2px;
+                // 與外框的距離（用margain只有下有作用，上沒有作用），所以用內間距 padding
+                padding: {
+                    top: 15px;
+                    bottom: 10px;
+                }
+                // // 定位點：絕對值
+                // position: absolute;
+                // // 清除浮動
+                // .Clear {
+                //     clear: both;
+                // }
+                
 
                 // 計算式
                 $TW : $W1P *7 ;
                 $NW : $W1P *10 - $TW;
+
+                $TFS : $Trem * 1.7;
+                $NFS : $Trem *1.1;
                 > .Title {
                     width: $TW;
+                    // 文字大小
+                    font-size: $TFS;
                 }
                 > .Number {
                     width: $NW;
+                    // 文字大小
+                    font-size: $NFS;
+                    // 靠右對齊
+                    text-align: right;
+                    // 計算 Title 及 Number 內間距的差
+                    padding: {
+                        top: $TFS - $NFS;
+                    }
                 }
                 > .Text {
                     width: $W1P *10;
+                    // 靠右對齊
+                    text-align: right;
                 }
             }
+
+            > .Images {
+                // 寬度
+                width: $W1P * 9.5;
+                // 高度 設定絕對高，不會隨著裝置高度變動
+                height: 300px;
+                // 外間距 建議與TitleBox 中的 padding-bottom 數值相同
+                margin: {
+                    bottom: 10px;
+                }
+                // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px 
+                border-radius: 10px;
+
+                background-color: darksalmon;
+            }
+
             > .LName {
                 background-color: cadetblue;
                 > ul{
