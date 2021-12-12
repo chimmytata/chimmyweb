@@ -266,20 +266,44 @@
 
                 > .OriginalPrice {
                     // 寬度
-                    width: $W1P *4;
+                    width: $W1P *3.5;
                     // 文字尺寸
                     font-size: $Trem * 0.9;
                     // 內間距 OriginalPrice 與 BargainPrice 對齊
                     padding: {
                         top: $Trem * 0.3;
                     }
+
+                    > span {
+                        // 價格與原價的前後距離
+                        padding: {
+                            left: 5px;
+                            right: 5px;
+                        }
+                        // 文字顏色
+                        color: blue;
+                    }
                 }
 
                 > .BargainPrice {
                     // 寬度
-                    width: $W1P * 4;
+                    width: $W1P * 4.5;
                     // 文字尺寸
                     font-size: $Trem * 1.2;
+
+                    > span {
+                        // em 或 rem 的尺寸，基於 根目錄 之下的值為基準
+                        font-size: $Trem * 1.5;
+                        // 價格與特價的前後距離
+                        padding: {
+                            left: 5px;
+                            right: 5px;
+                        }
+                        // 文字顏色
+                        color: brown;
+                        // 文字粗細 600就很粗
+                        font-weight: 600;
+                    }
                 }
 
                 >.Car {
