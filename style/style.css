@@ -184,16 +184,30 @@ You may only @extend selectors within the same directive.
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     list-style: none;
-    background-color: #d4c37e;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
   #Main > #NewCommodity > .NCommodity > #TitleBox > .Title {
     width: 70%;
+    font-size: 1.7rem;
   }
   #Main > #NewCommodity > .NCommodity > #TitleBox > .Number {
     width: 30%;
+    font-size: 1.1rem;
+    text-align: right;
+    padding-top: 0.6rem;
   }
   #Main > #NewCommodity > .NCommodity > #TitleBox > .Text {
     width: 100%;
+    text-align: right;
+  }
+  #Main > #NewCommodity > .NCommodity > .Images {
+    width: 95%;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: darksalmon;
   }
   #Main > #NewCommodity > .NCommodity > .LName {
     background-color: cadetblue;
