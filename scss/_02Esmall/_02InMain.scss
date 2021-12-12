@@ -117,6 +117,14 @@
     }
 
     > #NewCommodity {
+        // 將原本在TitleBox中的計算是搬到外面用
+        // 計算式
+        $TW : $W1P *7 ;
+        $NW : $W1P *10 - $TW;
+
+        $TFS : $Trem * 1.7;
+        $NFS : $Trem *1.1;
+
         > h1{
             // 文字尺寸
             font-size: $Trem *1.5;
@@ -167,12 +175,7 @@
                 // }
                 
 
-                // 計算式
-                $TW : $W1P *7 ;
-                $NW : $W1P *10 - $TW;
-
-                $TFS : $Trem * 1.7;
-                $NFS : $Trem *1.1;
+                
                 > .Title {
                     width: $TW;
                     // 文字大小
@@ -195,8 +198,7 @@
                     text-align: right;
                 }
             }
-            // 測試
-
+            
             > .Images {
                 // 寬度
                 width: $W1P * 9.5;
@@ -207,20 +209,34 @@
                     bottom: 10px;
                 }
                 // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px 
-                border-radius: 10px;
+                // border-radius: 10px;
+                @include Rounded(15);
 
                 background-color: darksalmon;
             }
 
             > .LName {
+                width: $W1P * 9;
+                // 彈性布局 橫向排版
+                display: flex;
+                // 外間距
+                margin: {
+                    bottom: 15px;
+                };
                 background-color: cadetblue;
-                > ul{
-                    > li {
-                        // 隱藏項目符號
-                        // list-style-type: none;
-                        @include DNli;
-                    }
+
+                > h3 {
+                    width: $TW +10;
+                    // 文字尺寸
+                    font-size: $Trem * 1.4;
                 }
+                > li {
+                    width: $NW 10;
+                    // 隱藏項目符號
+                    // list-style-type: none;
+                    @include DNli;
+                }
+
             }
         }
     }
