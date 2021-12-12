@@ -171,6 +171,10 @@ You may only @extend selectors within the same directive.
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  #Main > #NewCommodity > .NCommodity {
+    width: 85vw;
+    background-color: azure;
+  }
 }
 
 @media screen and (min-width: 576px) {

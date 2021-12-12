@@ -116,7 +116,7 @@
         }
     }
 
-    > #NewCommodity{
+    > #NewCommodity {
         > h1{
             // 文字尺寸
             font-size: $Trem *1.5;
@@ -129,6 +129,14 @@
                 top: 15px;
                 bottom: 15px;
             };
+        }
+
+        > .NCommodity {
+            // 寬度
+            width: $W10 * 8.5;
+
+            // 背景顏色
+            background-color: azure;
         }
     }
 }
