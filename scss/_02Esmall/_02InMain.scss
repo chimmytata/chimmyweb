@@ -134,9 +134,47 @@
         > .NCommodity {
             // 寬度
             width: $W10 * 8.5;
-
+            // 外間距
+            margin: {
+                bottom: 20px;
+            };
             // 背景顏色
             background-color: azure;
+
+            > #TitleBox {
+                // 寬度
+                width: $W1P * 8;
+                // 彈性布局
+                display: flex;
+                // 換行
+                flex-wrap: wrap;
+                // 隱藏項目符號
+                @include DNli;
+                background-color: rgb(212, 195, 126);
+
+                // 計算式
+                $TW : $W1P *7 ;
+                $NW : $W1P *10 - $TW;
+                > .Title {
+                    width: $TW;
+                }
+                > .Number {
+                    width: $NW;
+                }
+                > .Text {
+                    width: $W1P *10;
+                }
+            }
+            > .LName {
+                background-color: cadetblue;
+                > ul{
+                    > li {
+                        // 隱藏項目符號
+                        // list-style-type: none;
+                        @include DNli;
+                    }
+                }
+            }
         }
     }
 }

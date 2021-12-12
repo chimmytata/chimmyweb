@@ -173,7 +173,33 @@ You may only @extend selectors within the same directive.
   }
   #Main > #NewCommodity > .NCommodity {
     width: 85vw;
+    margin-bottom: 20px;
     background-color: azure;
+  }
+  #Main > #NewCommodity > .NCommodity > #TitleBox {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style: none;
+    background-color: #d4c37e;
+  }
+  #Main > #NewCommodity > .NCommodity > #TitleBox > .Title {
+    width: 70%;
+  }
+  #Main > #NewCommodity > .NCommodity > #TitleBox > .Number {
+    width: 30%;
+  }
+  #Main > #NewCommodity > .NCommodity > #TitleBox > .Text {
+    width: 100%;
+  }
+  #Main > #NewCommodity > .NCommodity > .LName {
+    background-color: cadetblue;
+  }
+  #Main > #NewCommodity > .NCommodity > .LName > ul > li {
+    list-style: none;
   }
 }
 
