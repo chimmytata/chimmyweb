@@ -225,6 +225,32 @@ You may only @extend selectors within the same directive.
     width: 30% 10;
     list-style: none;
   }
+  #Main > #NewCommodity > .NCommodity > .Brief {
+    width: 85%;
+    text-align: justify;
+    background-color: #bebd58;
+    margin-bottom: 10px;
+  }
+  #Main > #NewCommodity > .NCommodity > #PriceBox {
+    width: 90%;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 10px;
+  }
+  #Main > #NewCommodity > .NCommodity > #PriceBox > .OriginalPrice {
+    width: 40%;
+    font-size: 0.9rem;
+    padding-top: 0.3rem;
+  }
+  #Main > #NewCommodity > .NCommodity > #PriceBox > .BargainPrice {
+    width: 40%;
+    font-size: 1.2rem;
+  }
+  #Main > #NewCommodity > .NCommodity > #PriceBox > .Car {
+    width: 20%;
+  }
 }
 
 @media screen and (min-width: 576px) {

@@ -132,7 +132,7 @@
             // 標題置中（文字置中）
             text-align: center;
 
-            // 內間距
+            // 內間距 只要是有包一層的 第一個及最後一個物件 只能用內間距推開 外間距無效
             padding: {
                 top: 15px;
                 bottom: 15px;
@@ -238,6 +238,59 @@
                 }
 
             }
+
+            > .Brief {
+                // 寬度
+                width: $W1P * 8.5;
+                // 文字對其 左右切齊
+                text-align: justify;
+                background-color: rgb(190, 189, 88);
+                // 外間距
+                margin: {
+                    bottom: 10px;
+                }
+            }
+
+            > #PriceBox {
+                // 寬度 
+                width: $W1P * 9;
+                // 隱藏項目符號
+                @include DNli;
+                // 彈性布局
+                display: flex;
+                // 內間距 只要是有包一層的 第一個及最後一個物件 只能用內間距推開 外間距無效
+                padding: {
+                    bottom: 10px;
+                }
+                
+
+                > .OriginalPrice {
+                    // 寬度
+                    width: $W1P *4;
+                    // 文字尺寸
+                    font-size: $Trem * 0.9;
+                    // 內間距 OriginalPrice 與 BargainPrice 對齊
+                    padding: {
+                        top: $Trem * 0.3;
+                    }
+                }
+
+                > .BargainPrice {
+                    // 寬度
+                    width: $W1P * 4;
+                    // 文字尺寸
+                    font-size: $Trem * 1.2;
+                }
+
+                >.Car {
+                    // 寬度
+                    width: $W1P *2;
+                }
+            }
+
+            
+
+
         }
     }
 }
