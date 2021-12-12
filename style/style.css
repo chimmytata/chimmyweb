@@ -165,6 +165,12 @@ You may only @extend selectors within the same directive.
     background-size: cover;
     background-image: url(../../img/Banner/001.jpg);
   }
+  #Main > #NewCommodity > h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 @media screen and (min-width: 576px) {

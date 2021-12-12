@@ -1,3 +1,5 @@
+// 子元素選擇器（有指向性），例如 header > nav > #LuluIcon > li
+
 #Main {
     background-color: rgb(216, 189, 156);
 
@@ -111,6 +113,22 @@
             .Item05 {
                 @include BPhoto(center, cover, Banner, "001.jpg");
             }
+        }
+    }
+
+    > #NewCommodity{
+        > h1{
+            // 文字尺寸
+            font-size: $Trem *1.5;
+
+            // 標題置中（文字置中）
+            text-align: center;
+
+            // 內間距
+            padding: {
+                top: 15px;
+                bottom: 15px;
+            };
         }
     }
 }
