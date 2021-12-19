@@ -18,6 +18,18 @@ You may not @extend an outer selector from within @media.
 You may only @extend selectors within the same directive.
 無法由 @media （媒體判斷）去呼叫「外部連結」
 */
+/* 
+$TWM(Title寬度的倍數)
+$TFSFSM(Title文字大小的倍數)
+$NFSFSM(Number文字大小的倍數)
+$MainW(Main寬度) 
+$BR(背景顏色的R) 
+$BG(背景顏色的G) 
+$BB(背景顏色的B)
+$TitleLe(Title的字距) 
+$ImagesRa(商品圖片的圓角矩形)
+$Lines(圖片的邊框粗細)
+*/
 @media screen and (max-width: 576px) {
   header {
     width: 100vw;
@@ -175,6 +187,8 @@ You may only @extend selectors within the same directive.
     width: 85vw;
     margin-bottom: 20px;
     background-color: azure;
+    -webkit-box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
+            box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
   }
   #Main > #NewCommodity > .NCommodity > #TitleBox {
     width: 80%;
@@ -204,10 +218,12 @@ You may only @extend selectors within the same directive.
   }
   #Main > #NewCommodity > .NCommodity > .Images {
     width: 95%;
-    height: 300px;
     margin-bottom: 10px;
     border-radius: 15px;
-    background-color: darksalmon;
+  }
+  #Main > #NewCommodity > .NCommodity > .Images > a > img {
+    border: 2px solid #490c0c;
+    border-radius: 15px;
   }
   #Main > #NewCommodity > .NCommodity > .LName {
     width: 90%;
@@ -262,6 +278,23 @@ You may only @extend selectors within the same directive.
   }
   #Main > #NewCommodity > .NCommodity > #PriceBox > .Car {
     width: 20%;
+  }
+  #Main > #NewCommodity > .more {
+    width: 80%;
+    text-align: right;
+    list-style: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  #Main > #NewCommodity > .more > a {
+    padding: 5px 30px;
+    display: inline-block;
+    background-color: #014686;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
   }
 }
 

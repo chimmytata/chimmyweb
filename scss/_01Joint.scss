@@ -142,3 +142,214 @@ You may only @extend selectors within the same directive.
     // 邊框角度設定，建議單位為 像素（px）
     border-radius: $Num + px;
 }
+
+// 新品上市 架構
+/* 
+$TWM(Title寬度的倍數)
+$TFSFSM(Title文字大小的倍數)
+$NFSFSM(Number文字大小的倍數)
+$MainW(Main寬度) 
+$BR(背景顏色的R) 
+$BG(背景顏色的G) 
+$BB(背景顏色的B)
+$TitleLe(Title的字距) 
+$ImagesRa(商品圖片的圓角矩形)
+$Lines(圖片的邊框粗細)
+*/
+@mixin NewCMer ( $TWM, $TFSFSM, $NFSFSM, $MainW, $BR, $BG, $BB, $TitleLe, $ImagesRa, $Lines ) {
+    // 計算式
+    $TW : $W1P * $TWM ;
+    $NW : $W1P *10 - $TW;
+
+    $TFS : $Trem * $TFSFSM;
+    $NFS : $Trem * $NFSFSM;
+
+    // 寬度 $W10 * 8.5
+    width: $MainW;
+    // 外間距
+    margin: {
+        bottom: 20px;
+    }
+    // // 重新定位原點 父框架設定 定位點：相對值；子框架設定 定位點：絕對值
+    // position: relative;
+    // 背景顏色 255,255,255
+    background-color: rgb($BR, $BG, $BB);
+
+    // 陰影 x軸 y軸 模糊程度 顏色(透明度)
+    box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
+
+    > #TitleBox {
+        // 寬度
+        width: $W1P * 8;
+        // 彈性布局
+        display: flex;
+        // 換行
+        flex-wrap: wrap;
+        // 隱藏項目符號
+        @include DNli;
+        // 字距（不要打太大，例如 5px）2px
+        letter-spacing: $TitleLe;
+        // 與外框的距離（用margain只有下有作用，上沒有作用），所以用內間距 padding
+        padding: {
+            top: 15px;
+            bottom: 10px;
+        }
+        // // 定位點：絕對值
+        // position: absolute;
+        // // 清除浮動
+        // .Clear {
+        //     clear: both;
+        // }
+        
+
+        
+        > .Title {
+            width: $TW;
+            // 文字大小
+            font-size: $TFS;
+        }
+        > .Number {
+            width: $NW;
+            // 文字大小
+            font-size: $NFS;
+            // 靠右對齊
+            text-align: right;
+            // 計算 Title 及 Number 內間距的差
+            padding: {
+                top: $TFS - $NFS;
+            }
+        }
+        > .Text {
+            width: $W1P *10;
+            // 靠右對齊
+            text-align: right;
+        }
+    }
+    
+    > .Images {
+        // 寬度
+        width: $W1P * 9.5;
+        // 高度 設定絕對高，不會隨著裝置高度變動
+        // 高度因為用圖片連結，所以先拿掉
+        // height: 300px;
+        // 外間距 建議與TitleBox 中的 padding-bottom 數值相同
+        margin: {
+            bottom: 10px;
+        }
+        // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px 
+        // border-radius: 15px;
+        border-radius: $ImagesRa;
+        
+        // 為了好看 先把背景顏色拿掉
+        // background-color: darksalmon;
+
+        > a {
+            > img {
+                // 圖片邊框 線段的粗細(要加單位)2px 線段的樣式(實線) 線段的顏色
+                border: $Lines solid rgb(73, 12, 12);
+
+                // 圓角矩形
+                // border-radius: 15px;
+                border-radius: $ImagesRa;
+            }
+        }
+    }
+
+    > .LName {
+        width: $W1P * 9;
+        // 彈性布局 橫向排版
+        display: flex;
+        // 外間距
+        margin: {
+            bottom: 15px;
+        };
+        background-color: cadetblue;
+
+        > h3 {
+            width: $TW +10;
+            // 文字尺寸
+            font-size: $Trem * 1.4;
+        }
+        > li {
+            width: $NW 10;
+            // 隱藏項目符號
+            // list-style-type: none;
+            @include DNli;
+        }
+
+    }
+
+    > .Brief {
+        // 寬度
+        width: $W1P * 8.5;
+        // 文字對其 左右切齊
+        text-align: justify;
+        background-color: rgb(190, 189, 88);
+        // 外間距
+        margin: {
+            bottom: 10px;
+        }
+    }
+
+    > #PriceBox {
+        // 寬度 
+        width: $W1P * 9;
+        // 隱藏項目符號
+        @include DNli;
+        // 彈性布局
+        display: flex;
+        // 內間距 只要是有包一層的 第一個及最後一個物件 只能用內間距推開 外間距無效
+        padding: {
+            bottom: 10px;
+        }
+        
+
+        > .OriginalPrice {
+            // 寬度
+            width: $W1P *3.5;
+            // 文字尺寸
+            font-size: $Trem * 0.9;
+            // 內間距 OriginalPrice 與 BargainPrice 對齊
+            padding: {
+                top: $Trem * 0.3;
+            }
+
+            > span {
+                // 價格與原價的前後距離
+                padding: {
+                    left: 5px;
+                    right: 5px;
+                }
+                // 文字顏色
+                color: blue;
+            }
+        }
+
+        > .BargainPrice {
+            // 寬度
+            width: $W1P * 4.5;
+            // 文字尺寸
+            font-size: $Trem * 1.2;
+
+            > span {
+                // em 或 rem 的尺寸，基於 根目錄 之下的值為基準
+                font-size: $Trem * 1.5;
+                // 價格與特價的前後距離
+                padding: {
+                    left: 5px;
+                    right: 5px;
+                }
+                // 文字顏色
+                color: brown;
+                // 文字粗細 600就很粗
+                font-weight: 600;
+            }
+        }
+
+        >.Car {
+            // 寬度
+            width: $W1P *2;
+        }
+    }
+
+}
