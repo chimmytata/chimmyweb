@@ -54,8 +54,17 @@ header {
 
         // 靠左對齊（與 LuluLogo 同一行）
         #MenuBtn {
+            height: 60px;
+
             // 浮點對齊法：靠左對齊 float:left
             float: left;
+
+            background-color: rgb(86, 211, 194);
+
+            // 文字取代圖片，呈現背景圖，而隱藏文字：利用首行縮排
+            text-indent: -9999px;
+
+            @include PhoneMenu(center, contain, icon, "menu.svg");
         }
 
         .Clear {

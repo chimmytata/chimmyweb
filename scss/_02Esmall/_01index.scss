@@ -26,6 +26,7 @@ header {
     background-color: rgb(140, 255, 105);
 
     nav {
+        width: $W1P *10 ;
         // 定位點 停佇
         position: fixed;
         // 靠上

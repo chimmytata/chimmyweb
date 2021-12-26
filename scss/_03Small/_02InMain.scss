@@ -148,6 +148,10 @@
             // 一行 兩欄 啟動彈性布局 換行
             display: flex;
             flex-wrap: wrap;
+            // 行（順序排列）
+            flex-direction: row;
+            // 主軸心（水平） 靠左--預設值，可以不給
+            // justify-content: flex-start;
 
             > .NCommodity {
                 // 寬度
@@ -408,6 +412,10 @@
             // 一行 兩欄 啟動彈性布局 換行
             display: flex;
             flex-wrap: wrap;
+            // 行（順序排列）
+            flex-direction: row;
+            // 主軸心（水平） 靠左--預設值，可以不給
+            // justify-content: flex-start;
 
             > .SCommodity {
                 // 寬度
