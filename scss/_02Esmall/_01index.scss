@@ -110,6 +110,31 @@ header {
         // 階層
         z-index: 9999;
         background-color: antiquewhite;
+
+        > #Close {
+            // 寬度與高度 做成正方形 高度不低於30px
+            width: 40px;
+            height: 40px;
+            // 隱藏項目符號
+            @include DNli;
+            // 定位點 絕對定位 就是浮起來
+            position: absolute;
+            // 位移 靠右 要設定 上和右 與頁面間距
+            top: 10px;
+            right: 10px;
+            background-color: aquamarine;
+        }
+
+        > h1 {
+            // 寬度
+            width: $W1P * 10;
+            // 高度
+            height: 110px;
+            // 文字置中
+            text-align: center;
+            line-height: 110px;
+            background-color: coral;
+        }
     }
 }
 
