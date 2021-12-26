@@ -26,6 +26,14 @@ header {
     background-color: rgb(140, 255, 105);
 
     nav {
+        // 定位點 停佇
+        position: fixed;
+        // 靠上
+        top: 0;
+        // 階層
+        z-index: 999;
+        background-color: antiquewhite;
+
         /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
@@ -40,12 +48,11 @@ header {
         // 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
         // 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；螢幕可式範圍高度的百分比，計算出實際高度；依照裝置的高度計算）
 
-        background-color: indianred;
-
         // 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
 
         // 單位不同無法計算，所以將原本5%，改成同一單位 vw
         @include LBW(8, 5vw);
+        
 
         // 靠左對齊（與 MenaBtn 同一行）
         #LuluLogo {

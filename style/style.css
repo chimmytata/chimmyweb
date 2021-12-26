@@ -42,6 +42,10 @@ $Lines(圖片的邊框粗細)
     background-color: #8cff69;
   }
   header nav {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: antiquewhite;
     /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
@@ -52,7 +56,6 @@ $Lines(圖片的邊框粗細)
 		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
 		*/
     width: 100vw;
-    background-color: indianred;
   }
   header nav #LuluLogo {
     width: 85vw;
@@ -111,6 +114,7 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     overflow: hidden;
     position: relative;
+    margin-top: 60px;
   }
   #Main #Banner .Btn {
     width: 20px;
