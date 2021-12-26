@@ -8,7 +8,7 @@ header {
 
     background-color: darkslateblue;
 
-    nav {
+    > #MainNav {
         // 彈性布局 flex ；對其物件的父框架
         // 顯示方式：彈性布局
         display: flex;

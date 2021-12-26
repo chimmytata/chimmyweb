@@ -41,7 +41,7 @@ $Lines(圖片的邊框粗細)
     width: 100%;
     background-color: #8cff69;
   }
-  header nav {
+  header > #MainNav {
     width: 100%;
     position: fixed;
     top: 0;
@@ -58,22 +58,22 @@ $Lines(圖片的邊框粗細)
 		*/
     width: 100vw;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     width: 85vw;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     width: 15vw;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     float: left;
   }
-  header nav #LuluIcon {
+  header > #MainNav #LuluIcon {
     display: none;
   }
-  header nav .LuluBtnBox {
+  header > #MainNav .LuluBtnBox {
     display: none;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     height: 60px;
     float: left;
     background-color: #56d3c2;
@@ -83,8 +83,18 @@ $Lines(圖片的邊框粗細)
     background-size: contain;
     background-image: url(../../img/icon/menu.svg);
   }
-  header nav .Clear {
+  header > #MainNav .Clear {
     clear: both;
+  }
+  header > #MenuNav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: antiquewhite;
   }
   footer hr {
     margin-bottom: 2rem;
@@ -380,7 +390,7 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     background-color: hotpink;
   }
-  header nav {
+  header > #MainNav {
     /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
@@ -393,23 +403,23 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     background-color: #a5cd5c;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     width: 85vw;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     width: 15vw;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     float: left;
     background-color: aqua;
   }
-  header nav #LuluIcon {
+  header > #MainNav #LuluIcon {
     display: none;
   }
-  header nav .LuluBtnBox {
+  header > #MainNav .LuluBtnBox {
     display: none;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     height: 60px;
     float: left;
     background-color: #56d3c2;
@@ -419,7 +429,7 @@ $Lines(圖片的邊框粗細)
     background-size: contain;
     background-image: url(../../img/icon/menu.svg);
   }
-  header nav .Clear {
+  header > #MainNav .Clear {
     clear: both;
   }
   footer {
@@ -741,7 +751,7 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     background-color: hotpink;
   }
-  header nav {
+  header > #MainNav {
     /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
@@ -754,20 +764,20 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     background-color: #875ccd;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     float: left;
     background-color: aqua;
   }
-  header nav #LuluIcon {
+  header > #MainNav #LuluIcon {
     display: none;
   }
-  header nav .LuluBtnBox {
+  header > #MainNav .LuluBtnBox {
     display: none;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     float: left;
   }
-  header nav .Clear {
+  header > #MainNav .Clear {
     clear: both;
   }
   footer address {
@@ -784,27 +794,27 @@ $Lines(圖片的邊框粗細)
     width: 100vw;
     background-color: darkslateblue;
   }
-  header nav {
+  header > #MainNav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  header nav #LuluLogo {
+  header > #MainNav #LuluLogo {
     width: 75vw;
   }
-  header nav #LuluIcon {
+  header > #MainNav #LuluIcon {
     width: 25vw;
   }
-  header nav #LuluIcon {
+  header > #MainNav #LuluIcon {
     display: block;
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header nav .LuluBtnBox {
+  header > #MainNav .LuluBtnBox {
     display: block;
     width: 100vw;
     list-style: none;
@@ -812,10 +822,10 @@ $Lines(圖片的邊框粗細)
     display: -ms-flexbox;
     display: flex;
   }
-  header nav .LuluBtnBox ul {
+  header > #MainNav .LuluBtnBox ul {
     display: none;
   }
-  header nav #MenuBtn {
+  header > #MainNav #MenuBtn {
     display: none;
   }
   footer address {

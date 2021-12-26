@@ -10,7 +10,7 @@ header {
     width: $W10 * 10;
     background-color: hotpink;
 
-    nav {
+    > #MainNav {
         /*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
