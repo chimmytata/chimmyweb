@@ -112,6 +112,38 @@ $Lines(圖片的邊框粗細)
     line-height: 110px;
     background-color: coral;
   }
+  header > #MenuNav > ul {
+    width: 80%;
+    margin-top: 25px;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: cornflowerblue;
+  }
+  header > #MenuNav > ul > .item {
+    width: 45%;
+    height: 70px;
+    margin-bottom: 10px;
+    background-color: cornsilk;
+  }
+  header > #MenuNav > ul > .item2 {
+    width: 95%;
+    height: 70px;
+    margin-bottom: 10px;
+    background-color: #89c589;
+  }
+  header > #MenuNav > ul > .item3 {
+    width: 30.33333%;
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  header > #MenuNav > ul > .cloth {
+    background-color: darkkhaki;
+  }
   footer hr {
     margin-bottom: 2rem;
   }

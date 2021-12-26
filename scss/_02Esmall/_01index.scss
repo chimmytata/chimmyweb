@@ -135,6 +135,52 @@ header {
             line-height: 110px;
             background-color: coral;
         }
+
+        > ul {
+            width: $W1P *8;
+            // 上邊界 外間距
+            margin: {
+                top: 25px;
+            }
+            // 隱藏項目符號
+            @include DNli;
+            // 彈性布局
+            display: flex;
+            // 換行
+            flex-wrap: wrap;
+            background-color: cornflowerblue;
+
+            > .item {
+                width: $W1P * 9 / 2;
+                height: 70px;
+                margin: {
+                    bottom: 10px;
+                }
+                background-color: cornsilk;
+            }
+
+            > .item2 {
+                width: $W1P * 9.5;
+                height: 70px;
+                margin: {
+                    bottom: 10px;
+                }
+                background-color: rgb(137, 197, 137);
+            }
+
+            > .item3 {
+                width: $W1P * 10 / 3 - 3;
+                height: 90px;
+                margin: {
+                    top: 10px;
+                    bottom: 10px;
+                }
+            }
+
+            > .cloth {
+                background-color: darkkhaki;
+            }
+        }
     }
 }
 
