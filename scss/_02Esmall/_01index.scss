@@ -96,6 +96,9 @@ header {
     }
 
     > #MenuNav {
+        // 都寫好了 這部分要隱藏起來
+        @include DN;
+        
         // 寬度 與 高度（裝置可是高度）
         width: $W1P * 10;
         height: $W1P * 10;
