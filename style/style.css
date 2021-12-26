@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body, html {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -32,7 +38,7 @@ $Lines(圖片的邊框粗細)
 */
 @media screen and (max-width: 576px) {
   header {
-    width: 100vw;
+    width: 100%;
     background-color: #8cff69;
   }
   header nav {
