@@ -227,12 +227,12 @@ footer {
     }
 
     // 版權宣告
-    p {
+    div {
         // 文字至中
         text-align: center;
 
         // 與下方距離
-        margin-bottom: 0.7rem;
+        padding-bottom: 1rem;
     }
     address {
         // 呼叫 混合函式

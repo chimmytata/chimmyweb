@@ -167,9 +167,9 @@ $Lines(圖片的邊框粗細)
     list-style: none;
     background-color: cadetblue;
   }
-  footer p {
+  footer div {
     text-align: center;
-    margin-bottom: 0.7rem;
+    padding-bottom: 1rem;
   }
   footer address {
     display: none;
