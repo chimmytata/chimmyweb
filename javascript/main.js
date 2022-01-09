@@ -113,6 +113,7 @@ for ( i = 0; i <= 10; i = i + 1 ) {
     console.log(i);
 }
 
+WhileCode();
 // 迴圈 while (條件) {程式} 與 for 的差別，在於無法指定執行圈數
 function WhileCode() {
     // 總數
@@ -120,8 +121,23 @@ function WhileCode() {
 
     // 亂數 ( 系統產生介於 0 ~ 1 之間)，將小數變為整數 ( 數值要介於 0 ~ 含30 ，需乘以 31 )，設為無條件捨去法
     let attack;
-    attack = Math.floor(Math.random() * 31);
-    // console.log(attack);
+    let count = 1;
+    
+    
+    while ( Number > 0 ){
+        console.log("第 " + count + " 次")
+        count = count + 1;
+    
+        attack = Math.floor(Math.random() * 31);
+        console.log("亂數為：" + attack);
+        
+        // 將計算過後的值，再指定給 Number
+        Number = Number - attack;
+    
+        console.log("計算結果：" + Number);
+    
+        // 設定條件 亂數要 > 10、最後計算的值要 > 0
+    }
 }
 
 
