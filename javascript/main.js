@@ -77,7 +77,7 @@ function TestCode(){
 var a = 1;
 let b = 2;
 
-// var 與 let 的差別
+
 function Var_LetCode() {
     // 區域變數 
     var a = 3;
@@ -87,3 +87,20 @@ function Var_LetCode() {
 }
     
 Var_LetCode();
+
+// var 與 let 的差別：暗藍色表示找不到變數，var 的作用愈會在 function 內才會區分「全域或區域」的差別；let 的作用域包含了全部，例如：function {...} if {...} 等等
+// 全域變數
+var A = 4, C = 1;
+let x = 5, y = 6;
+{
+    var d = A + C;
+    let z = x + y;
+}
+console.log(d);
+// 呼叫不到z
+console.log(z);
+
+function NumCal() {
+    var d = A + C;
+    let z = x + y;
+}
