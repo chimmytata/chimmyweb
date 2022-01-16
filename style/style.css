@@ -87,7 +87,6 @@ $Lines(圖片的邊框粗細)
     clear: both;
   }
   header > #MenuNav {
-    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
