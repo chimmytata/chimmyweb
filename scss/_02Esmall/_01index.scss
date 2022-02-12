@@ -18,24 +18,24 @@
 // }
 
 // 目前使用的單位（數值）是 百分比（%）；網頁的固定單位--像素 px
-// 測試 測試
+// 測試 測試 測試
 
 header {
-    // 寬度
-    width: $W1P * 10;
-    background-color: rgb(140, 255, 105);
+	// 寬度
+	width: $W1P * 10;
+	background-color: rgb(140, 255, 105);
 
-    > #MainNav {
-        width: $W1P *10 ;
-        // 定位點 停佇
-        position: fixed;
-        // 靠上
-        top: 0;
-        // 階層
-        z-index: 999;
-        background-color: antiquewhite;
+	> #MainNav {
+		width: $W1P *10;
+		// 定位點 停佇
+		position: fixed;
+		// 靠上
+		top: 0;
+		// 階層
+		z-index: 999;
+		background-color: antiquewhite;
 
-        /*
+		/*
 		浮動對齊的問題 float
 		1. #LuluLogo 與 #MenaBtn 物件的父框架 nav 無寬度
 		2. nav 的父框架 header ，高度消失（展開）
@@ -44,198 +44,197 @@ header {
 		2. 清除浮動狀態，由 nav 設定
 		3. 利用圖片高度撐開父框架的高（先將nav中的高拿掉 height: 10vh;）
 		*/
-        width: $W10 * 10;
+		width: $W10 * 10;
 
-        // 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
-        // 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；螢幕可式範圍高度的百分比，計算出實際高度；依照裝置的高度計算）
+		// 設定高度 單位為 % （在響應式裝置無法用，因為 %　未給予基準值，所以無法計算出實際高度）
+		// 設定高度 用 vh （響應式裝置使用，但在IE瀏覽器無法使；螢幕可式範圍高度的百分比，計算出實際高度；依照裝置的高度計算）
 
-        // 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
+		// 解決方式二：清除浮動狀態，由 nav 設定;要先在index.html中，寫入一個段落（p），之後設定寫在_01Joint.scss，在第57行寫入呼叫
 
-        // 單位不同無法計算，所以將原本5%，改成同一單位 vw
-        @include LBW(8, 5vw);
-        
+		// 單位不同無法計算，所以將原本5%，改成同一單位 vw
+		@include LBW(8, 5vw);
 
-        // 靠左對齊（與 MenaBtn 同一行）
-        #LuluLogo {
-            // 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
-            // width: $W10 * 8 + 5%;
+		// 靠左對齊（與 MenaBtn 同一行）
+		#LuluLogo {
+			// 寬度 % 或 vw（螢幕可式範圍寬度的百分比）
+			// width: $W10 * 8 + 5%;
 
-            // 浮點對齊法：靠左對齊 float:left
-            float: left;
-            // background-color: aqua;
-        }
+			// 浮點對齊法：靠左對齊 float:left
+			float: left;
+			// background-color: aqua;
+		}
 
-        #LuluIcon {
-            // 呼叫 混合函式
-            @include DN;
-        }
+		#LuluIcon {
+			// 呼叫 混合函式
+			@include DN;
+		}
 
-        .LuluBtnBox {
-            // 呼叫 混合函式
-            @include DN;
-        }
+		.LuluBtnBox {
+			// 呼叫 混合函式
+			@include DN;
+		}
 
-        // 靠左對齊（與 LuluLogo 同一行）
-        #MenuBtn {
-            height: 60px;
+		// 靠左對齊（與 LuluLogo 同一行）
+		#MenuBtn {
+			height: 60px;
 
-            // 浮點對齊法：靠左對齊 float:left
-            float: left;
+			// 浮點對齊法：靠左對齊 float:left
+			float: left;
 
-            background-color: rgb(86, 211, 194);
+			background-color: rgb(86, 211, 194);
 
-            // 文字取代圖片，呈現背景圖，而隱藏文字：利用首行縮排
-            text-indent: -9999px;
+			// 文字取代圖片，呈現背景圖，而隱藏文字：利用首行縮排
+			text-indent: -9999px;
 
-            @include PhoneMenu(center, contain, icon, "menu.svg");
-        }
+			@include PhoneMenu(center, contain, icon, "menu.svg");
+		}
 
-        .Clear {
-            @include ClearFloat;
-        }
-    }
+		.Clear {
+			@include ClearFloat;
+		}
+	}
 
-    > #MenuNav {
-        // 都寫好了 這部分要隱藏起來
-        // @include DN;
-        
-        // 寬度 與 高度（裝置可是高度）
-        width: $W1P * 10;
-        height: $W1P * 10;
-        // 定位點 絕對定位
-        position: absolute;
-        // 停佇
-        position: fixed;
-        // 靠上
-        top: 0;
-        // 溢位 隱藏卷軸
-        overflow: hidden;
-        // 階層
-        z-index: 9999;
-        background-color: antiquewhite;
+	> #MenuNav {
+		// 都寫好了 這部分要隱藏起來
+		// @include DN;
 
-        > #Close {
-            // 寬度與高度 做成正方形 高度不低於30px
-            width: 40px;
-            height: 40px;
-            // 隱藏項目符號
-            @include DNli;
-            // 定位點 絕對定位 就是浮起來
-            position: absolute;
-            // 位移 靠右 要設定 上和右 與頁面間距
-            top: 10px;
-            right: 10px;
-            background-color: aquamarine;
-        }
+		// 寬度 與 高度（裝置可是高度）
+		width: $W1P * 10;
+		height: $W1P * 10;
+		// 定位點 絕對定位
+		position: absolute;
+		// 停佇
+		position: fixed;
+		// 靠上
+		top: 0;
+		// 溢位 隱藏卷軸
+		overflow: hidden;
+		// 階層
+		z-index: 9999;
+		background-color: antiquewhite;
 
-        > h1 {
-            // 寬度
-            width: $W1P * 10;
-            // 高度
-            height: 110px;
-            // 文字置中
-            text-align: center;
-            line-height: 110px;
-            background-color: coral;
-        }
+		> #Close {
+			// 寬度與高度 做成正方形 高度不低於30px
+			width: 40px;
+			height: 40px;
+			// 隱藏項目符號
+			@include DNli;
+			// 定位點 絕對定位 就是浮起來
+			position: absolute;
+			// 位移 靠右 要設定 上和右 與頁面間距
+			top: 10px;
+			right: 10px;
+			background-color: aquamarine;
+		}
 
-        > ul {
-            width: $W1P * 9;
+		> h1 {
+			// 寬度
+			width: $W1P * 10;
+			// 高度
+			height: 110px;
+			// 文字置中
+			text-align: center;
+			line-height: 110px;
+			background-color: coral;
+		}
 
-            // 定位點 相對定位
-            position: relative;
-            // 移位 往下移動 （設定 top 數值）
-            top: 50%;
-            // 上邊界 外間距 
-            /*
+		> ul {
+			width: $W1P * 9;
+
+			// 定位點 相對定位
+			position: relative;
+			// 移位 往下移動 （設定 top 數值）
+			top: 50%;
+			// 上邊界 外間距
+			/*
             item高 70px+間距 10px=80px
             item + item2 (80px+80px) =160px 
             兩者高 - h1高 160px-110px=50px 
             160px+50px=210px
             然後自己再去微調*/
-            margin: {
-                top: -245px;
-            }
-            // 隱藏項目符號
-            @include DNli;
-            // 彈性布局
-            display: flex;
-            // 換行
-            flex-wrap: wrap;
-            background-color: cornflowerblue;
+			margin: {
+				top: -245px;
+			}
+			// 隱藏項目符號
+			@include DNli;
+			// 彈性布局
+			display: flex;
+			// 換行
+			flex-wrap: wrap;
+			background-color: cornflowerblue;
 
-            > .item {
-                width: $W1P * 9 / 2;
-                height: 70px;
-                margin: {
-                    bottom: 10px;
-                }
-                background-color: cornsilk;
-            }
+			> .item {
+				width: $W1P * 9 / 2;
+				height: 70px;
+				margin: {
+					bottom: 10px;
+				}
+				background-color: cornsilk;
+			}
 
-            > .item2 {
-                width: $W1P * 9.5;
-                height: 70px;
-                margin: {
-                    bottom: 10px;
-                }
-                background-color: rgb(137, 197, 137);
-            }
+			> .item2 {
+				width: $W1P * 9.5;
+				height: 70px;
+				margin: {
+					bottom: 10px;
+				}
+				background-color: rgb(137, 197, 137);
+			}
 
-            > .item3 {
-                width: $W1P * 10 / 3 - 3;
-                height: 90px;
-                margin: {
-                    top: 10px;
-                    bottom: 10px;
-                }
-            }
+			> .item3 {
+				width: $W1P * 10 / 3 - 3;
+				height: 90px;
+				margin: {
+					top: 10px;
+					bottom: 10px;
+				}
+			}
 
-            > .cloth {
-                background-color: darkkhaki;
-            }
-        }
-    }
+			> .cloth {
+				background-color: darkkhaki;
+			}
+		}
+	}
 }
 
 footer {
-    // 物件之間的距離 vh rem
-    // margin-top: 2rem;
+	// 物件之間的距離 vh rem
+	// margin-top: 2rem;
 
-    hr {
-        // 水平線與下方距離
-        margin-bottom: 2rem;
-    }
+	hr {
+		// 水平線與下方距離
+		margin-bottom: 2rem;
+	}
 
-    // 手機板次導覽列
-    nav {
-        // 與下方距離
-        margin-bottom: 2rem;
+	// 手機板次導覽列
+	nav {
+		// 與下方距離
+		margin-bottom: 2rem;
 
-        ul {
-            // 上下左右至中
-            width: 90%;
+		ul {
+			// 上下左右至中
+			width: 90%;
 
-            // 彈性布局
-            display: flex;
+			// 彈性布局
+			display: flex;
 
-            // 隱藏項目符號
-            @include DNli;
+			// 隱藏項目符號
+			@include DNli;
 
-            background-color: cadetblue;
-        }
-    }
+			background-color: cadetblue;
+		}
+	}
 
-    // 版權宣告
-    div {
-        // 文字至中
-        text-align: center;
+	// 版權宣告
+	div {
+		// 文字至中
+		text-align: center;
 
-        // 與下方距離
-        padding-bottom: 1rem;
-    }
-    address {
-        // 呼叫 混合函式
-        @include DN;
-    }
+		// 與下方距離
+		padding-bottom: 1rem;
+	}
+	address {
+		// 呼叫 混合函式
+		@include DN;
+	}
 }
