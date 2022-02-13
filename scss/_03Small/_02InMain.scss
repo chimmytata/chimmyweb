@@ -78,7 +78,8 @@
                 // padding-bottom: 25vh;
                 // padding-bottom: 250px;
                 // 子框架的padding = 父框架的padding - 相差值 $Differ
-                padding-bottom: $ImgPadding - $Differ;
+                // 修正高度
+                padding-bottom: $ImgPadding;
             }
 
             .Item01 {
