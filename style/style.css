@@ -213,7 +213,7 @@ $Lines(圖片的邊框粗細)
     position: absolute;
     font-size: 72px;
     text-align: center;
-    padding-bottom: 250px;
+    padding-bottom: 335px;
   }
   #Main #Banner #ImgBox .Item01 {
     width: 100vw;
@@ -550,7 +550,7 @@ $Lines(圖片的邊框粗細)
     position: absolute;
     font-size: 72px;
     text-align: center;
-    padding-bottom: 295px;
+    padding-bottom: 385px;
   }
   #Main #Banner #ImgBox .Item01 {
     width: 100vw;
@@ -903,7 +903,7 @@ $Lines(圖片的邊框粗細)
     font-size: 1.2rem;
     position: absolute;
     z-index: 5;
-    top: 145px;
+    top: 227.5px;
     border-radius: 15px;
   }
   #Main #Banner .LeftBtn {
@@ -917,7 +917,7 @@ $Lines(圖片的邊框粗細)
   #Main #Banner #ImgBox {
     width: 100vw;
     list-style: none;
-    padding-bottom: 385px;
+    padding-bottom: 550px;
     background-color: #e22b62;
   }
   #Main #Banner #ImgBox li {
@@ -926,7 +926,7 @@ $Lines(圖片的邊框粗細)
     position: absolute;
     font-size: 72px;
     text-align: center;
-    padding-bottom: 295px;
+    padding-bottom: 550px;
   }
   #Main #Banner #ImgBox .Item01 {
     width: 100vw;
@@ -1190,7 +1190,7 @@ $Lines(圖片的邊框粗細)
     font-size: 1.2rem;
     position: absolute;
     z-index: 5;
-    top: 145px;
+    top: 277.5px;
     border-radius: 15px;
   }
   #Main #Banner .LeftBtn {
@@ -1204,7 +1204,7 @@ $Lines(圖片的邊框粗細)
   #Main #Banner #ImgBox {
     width: 100vw;
     list-style: none;
-    padding-bottom: 385px;
+    padding-bottom: 650px;
     background-color: #e22b62;
   }
   #Main #Banner #ImgBox li {
@@ -1213,7 +1213,7 @@ $Lines(圖片的邊框粗細)
     position: absolute;
     font-size: 72px;
     text-align: center;
-    padding-bottom: 295px;
+    padding-bottom: 650px;
   }
   #Main #Banner #ImgBox .Item01 {
     width: 100vw;
