@@ -1,6 +1,8 @@
 <nav id="MainNav">
     <!-- 導覽列標籤 nav 項目清單 ul li；商標 標題1(h1) -->
-    <h1 id="LuluLogo">Lulu</h1>
+    <a href="../index.html">
+        <h1 id="LuluLogo">Lulu</h1>
+    </a>
 
     <!-- Icon 區塊標籤 div id:icon -->
     <div id="LuluIcon">
@@ -10,9 +12,11 @@
     </div>
 
     <ul class="LuluBtnBox">
-        <li>新品上市</li>
-        <li>風格企劃</li>
-        <li>熱銷到貨</li>
+        <li class="LuluNewCommodity">
+            <a href="web/NewCommodity.html">新品上市</a>
+        </li>
+        <li class="LuluShare">風格企劃</li>
+        <li class="LuluHot">熱銷到貨</li>
         <li class="LuluCommodity">全館商品
             <ul class="LuluCommodityBox">
                 <li class="LuluCloth">上衣</li>
@@ -42,17 +46,19 @@
     <li id="Close">close</li>
     <h1>Lulu</h1>
     <ul>
-        <li class="NewCommodity item">新品上市</li>
-        <li class="Share item">風格企劃</li>
-        <li class="item2">SALE</li>
+        <li class="item NewCommodity">
+            <a href="web/NewCommodity.html">新品上市</a>
+        </li>
+        <li class="item Share">風格企劃</li>
+        <li class="item2 Hot">熱銷到貨</li>
         <li class="item3 cloth">上衣</li>
-        <li class="item3">外套</li>
-        <li class="item3">洋裝</li>
-        <li class="item3">褲子</li>
-        <li class="item3">裙子</li>
-        <li class="item3">配件</li>
+        <li class="item3 Coat">外套</li>
+        <li class="item3 Dress">洋裝</li>
+        <li class="item3 Pants">褲子</li>
+        <li class="item3 Skrit">裙子</li>
+        <li class="item3 Accessories">配件</li>
     </ul>
 
 </nav>
-<!-- 修正路徑 把../拿掉 -->
-<script src="javascript/header.js"></script>
+
+<script src="../../javascript/header.js"></script>
