@@ -125,7 +125,7 @@ function NewCommodityCon() {
 
     // 在 NCommodity 內新增 ul
     let CO = document.getElementById('NCommodity');
-
+    
     // 建立 ul 框架
     CO.appendChild(ul);
 
@@ -158,27 +158,6 @@ function NewCommodityCon() {
         li.innerText = LiCon[i];
     }*/
 
-    // 建立 for （建立 li）方法
-    function ForLi(Class, IdName, Con){
-         // for 迴圈
-        for(let i = 0; i < Class.length; i++) {
-            // 建立 li
-            let li = document.createElement('li');
-
-            // 在 TitleBox （宣告在 137 行 TB）
-            IdName.appendChild(li);
-
-            // 新增 class 屬性
-            li.setAttribute("class", Class[i]);
-
-            // 置入 內容
-            li.innerHTML = Con[i];
-        }
-        // 終止方法（函式）執行
-        return;
-    }
-
-
     // 建立 class 的變數
     // let Number = TB.getElementsByClassName('Number')[0];
     // querySelector() 在文件中匹配指定 css 選擇器
@@ -201,7 +180,7 @@ function NewCommodityCon() {
         // 新增 div 的框架，宣告變數
         let Div = document.createElement('div');
 
-        // 在 Commodity
+        // 在 NCommodity（宣告在 127 行）
         CO.appendChild(Div);
 
         // 新增屬性
@@ -229,15 +208,52 @@ function NewCommodityCon() {
     let Li = document.createElement('li');
     // 屬性
     Li.setAttribute("class","Love");
-    // 在 LName 新增；CO 在 Commodity （宣告在 127 行）
+    // 在 LName 新增；CO 在 NCommodity（宣告在 127 行）
     let LName = CO.querySelector('.LName');
     LName.appendChild(H3).innerText = "商品名稱";
     LName.appendChild(Li).innerText = "我的最愛";
 
-    // 在 Brief 內新增 html 資料；CO 在 Commodity （宣告在 127 行）
+    // 在 Brief 內新增 html 資料；CO 在 NCommodity（宣告在 127 行）
     let Brief = CO.querySelector('.Brief');
     Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計";
 
      /* ============================================================== */
     //  在 價格 PriceBox 新增資料
+    // 新增標籤 ul ;前面有宣告了，所以就不用 let
+    ul = document.createElement('ul');
+
+    // 在 NCommodity 內新增 ul ;前面有宣告了，所以就不用 let
+    CO = document.getElementById('NCommodity');
+    ul.setAttribute("id","PriceBox");
+    // 建立 ul 
+    CO.appendChild(ul);
+
+    // 參考 127行
+    let PriceBox = document.getElementById('PriceBox');
+    // 陣列 class
+    let PBLi = ['OriginalPrice','BargainPrice','Car'];
+    // 內容
+    let PBLiCon = ['原價<span><s>1,000</s></span>元','特價<span>800</span>元','購物車'];
+    ForLi(PBLi, PriceBox, PBLiCon);
+
+    /* ============================================================== */
+    // 建立 for （建立 li）方法
+    function ForLi(Class, IdName, Con){
+        // for 迴圈
+       for(let i = 0; i < Class.length; i++) {
+           // 建立 li
+           let li = document.createElement('li');
+
+           // 在 框架 新增 標籤 li ；參考 TitleBox（宣告在 137 行 TB）、PriceBox（宣告在 232行）
+           IdName.appendChild(li);
+
+           // 新增 class 屬性
+           li.setAttribute("class", Class[i]);
+
+           // 置入 內容
+           li.innerHTML = Con[i];
+       }
+       // 終止方法（函式）執行
+       return;
+   }
 }
