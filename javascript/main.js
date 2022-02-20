@@ -214,6 +214,6 @@ function NewCommodityCon() {
 
     // 在 Brief 內新增 html 資料；CO 在 Commodity （宣告在 127 行）
     let Brief = CO.querySelector('.Brief');
-    Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計"
+    Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計";
 
 }
