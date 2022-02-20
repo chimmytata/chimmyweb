@@ -102,10 +102,12 @@ function SmallNavCon () {
     
 }
 
+for( let i = 0; i < 8; i++) {
+         
+}
 NewCommodityCon();
 // 新增 新品上市 的內容
 function NewCommodityCon() {
-
     // 新增標籤 section
     let sec = document.createElement('section');
 
@@ -115,16 +117,15 @@ function NewCommodityCon() {
     // 建立 section 框架，給予名稱
     SE.appendChild(sec);
 
-    // 給予 class 和 id 名稱
-    sec.setAttribute("id","NCommodity");
-    sec.setAttribute("class","NCommodity"); 
+    // 給予 class 
+    sec.setAttribute("class","NCommodity");
 
     /* ============================================================== */
     // 新增標籤 ul
     let ul = document.createElement('ul');
 
     // 在 NCommodity 內新增 ul
-    let CO = document.getElementById('NCommodity');
+    let CO = document.querySelector('.NCommodity');
     
     // 建立 ul 框架
     CO.appendChild(ul);
@@ -223,7 +224,7 @@ function NewCommodityCon() {
     ul = document.createElement('ul');
 
     // 在 NCommodity 內新增 ul ;前面有宣告了，所以就不用 let
-    CO = document.getElementById('NCommodity');
+    CO = document.querySelector('.NCommodity');
     ul.setAttribute("id","PriceBox");
     // 建立 ul 
     CO.appendChild(ul);
