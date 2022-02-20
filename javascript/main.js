@@ -142,8 +142,9 @@ function NewCommodityCon() {
     // 宣告 li 的內容
     let LiCon = ['新品上市','庫存','數量有限，售完為止'];
 
+    ForLi(LiClass, TB, LiCon);
     // for 迴圈
-    for(let i = 0;i<LiClass.length;i++) {
+    /*for(let i = 0;i<LiClass.length;i++) {
         // 建立 li
         let li = document.createElement('li');
 
@@ -155,7 +156,28 @@ function NewCommodityCon() {
 
         // 置入 內容
         li.innerText = LiCon[i];
+    }*/
+
+    // 建立 for （建立 li）方法
+    function ForLi(Class, IdName, Con){
+         // for 迴圈
+        for(let i = 0; i < Class.length; i++) {
+            // 建立 li
+            let li = document.createElement('li');
+
+            // 在 TitleBox （宣告在 137 行 TB）
+            IdName.appendChild(li);
+
+            // 新增 class 屬性
+            li.setAttribute("class", Class[i]);
+
+            // 置入 內容
+            li.innerHTML = Con[i];
+        }
+        // 終止方法（函式）執行
+        return;
     }
+
 
     // 建立 class 的變數
     // let Number = TB.getElementsByClassName('Number')[0];
@@ -216,4 +238,6 @@ function NewCommodityCon() {
     let Brief = CO.querySelector('.Brief');
     Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計";
 
+     /* ============================================================== */
+    //  在 價格 PriceBox 新增資料
 }
