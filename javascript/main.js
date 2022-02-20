@@ -194,4 +194,11 @@ function NewCommodityCon() {
     let Images = CO.querySelector('.Images');
     // 在 Images 內新增
     Images.appendChild(A);
+
+    // Images > a 內新增資料
+    let Img = document.createElement('img');
+    // 給予 屬性
+    Img.setAttribute("src","img/Merchandise/001.jpg");
+    // 在 a 內新增
+    A.appendChild(Img);
 }
