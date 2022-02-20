@@ -201,4 +201,19 @@ function NewCommodityCon() {
     Img.setAttribute("src","img/Merchandise/001.jpg");
     // 在 a 內新增
     A.appendChild(Img);
+
+    // 在 LName 新增資料 h3 li
+    let H3 = document.createElement('h3');
+    let Li = document.createElement('li');
+    // 屬性
+    Li.setAttribute("class","Love");
+    // 在 LName 新增；CO 在 Commodity （宣告在 127 行）
+    let LName = CO.querySelector('.LName');
+    LName.appendChild(H3).innerText = "商品名稱";
+    LName.appendChild(Li).innerText = "我的最愛";
+
+    // 在 Brief 內新增 html 資料；CO 在 Commodity （宣告在 127 行）
+    let Brief = CO.querySelector('.Brief');
+    Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計"
+
 }
