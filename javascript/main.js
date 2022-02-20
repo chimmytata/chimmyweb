@@ -106,8 +106,8 @@ function SmallNavCon () {
 NewCommodityCon();
 // 新增 新品上市 的內容
 function NewCommodityCon() {
-    let CommClass = ["NCommodity CO1","NCommodity CO2","NCommodity CO3","NCommodity CO4","NCommodity CO5","NCommodity CO6","NCommodity CO7","NCommodity CO8"];
-    // for( let i = 0; i < CommClass.length; i++) {
+    let CommID = ["CO1","CO2","CO3","CO4","CO5","CO6","CO7","CO8"];
+    for( let i = 0; i < CommID.length; i++) {
         // 新增標籤 section
         let sec = document.createElement('section');
 
@@ -120,13 +120,16 @@ function NewCommodityCon() {
         // 給予 class 
         sec.setAttribute("class","NCommodity");
         // sec.setAttribute("class",CommClass[i]);
+        sec.setAttribute("id",CommID[i]);
     
         /* ============================================================== */
         // 新增標籤 ul
         let ul = document.createElement('ul');
 
         // 在 NCommodity 內新增 ul
-        let CO = document.querySelector('.NCommodity');
+        // let CO = document.querySelector('.NCommodity');
+        // let CO = document.querySelector(CommClass[i]);
+        let CO = document.getElementById(CommID[i]);
         
         // 建立 ul 框架
         CO.appendChild(ul);
@@ -225,7 +228,8 @@ function NewCommodityCon() {
         ul = document.createElement('ul');
 
         // 在 NCommodity 內新增 ul ;前面有宣告了，所以就不用 let
-        CO = document.querySelector('.NCommodity');
+        // CO = document.querySelector('.NCommodity');
+        CO = document.getElementById(CommID[i]);
         ul.setAttribute("id","PriceBox");
         // 建立 ul 
         CO.appendChild(ul);
@@ -258,5 +262,5 @@ function NewCommodityCon() {
         // 終止方法（函式）執行
         return;
     }
-//    }
+   }
 }
