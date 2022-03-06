@@ -103,11 +103,15 @@ function SmallNavCon () {
 }
 
 
-NewCommodityCon();
+// 主頁商品 共用 （全域）變數區
+// 設定 div class 名稱陣列
+let DClass = ['Images','LName','Brief'];
+
+NewCommodityCon(8);
 // 新增 新品上市 的內容
-function NewCommodityCon() {
-    let CommID = ["CO1","CO2","CO3","CO4","CO5","CO6","CO7","CO8"];
-    for( let i = 0; i < CommID.length; i++) {
+function NewCommodityCon(Number) {
+    // let CommID = ["CO1","CO2","CO3","CO4","CO5","CO6","CO7","CO8"];
+    for( let i = 0; i < Number; i++) {
         // 新增標籤 section
         let sec = document.createElement('section');
 
@@ -182,8 +186,7 @@ function NewCommodityCon() {
         ul id=TitleBox 同一層
         div class=Images div class=LName div class=Brief 建立3個 div 框架
         ========= */
-        // 設定 div class 名稱陣列
-        let DClass = ['Images','LName','Brief'];
+        
 
         for(let i =0;i<DClass.length;i++) {
             // 新增 div 的框架，宣告變數
@@ -261,4 +264,51 @@ function NewCommodityCon() {
         // 終止方式（函式）執行
         return;
     }    
+}
+
+ShareCon(8);
+// 新增 風格企劃 的內容
+function ShareCon(Number) {
+    let i = Number;
+    let a = i + Number;
+    // // 在同一頁面中，會將相同 名稱 的 class，累加編輯
+    for ( i; i < a; i++) {
+        New_ID_Tag( 'ShareCon', 'section', 'class', 'NCommodity');
+        New_Class_Tag( 'NCommodity', 'p', 'class', 'Null', i);
+
+        for( let b= 0; b < DClass.length; b++) {
+            New_Class_Tag( 'NCommodity', 'div', 'class', DClass[b], i);
+        }
+    }
+    return;
+}
+
+// 給予一個 ID 屬性
+function New_ID_Tag( IdName, NewTagName, IdClass, IdClassName) {
+    // 指定在 框架（自訂） 內新增標籤 宣告變數
+    let BoxTag = document.getElementById(IdName);
+
+    // 新增標籤 宣告變數
+    let TagName = document.createElement(NewTagName);
+
+    // 在 框架 內新增 標籤
+    BoxTag.appendChild(TagName);
+
+    // 給予屬性
+    TagName.setAttribute(IdClass, IdClassName);
+}
+
+// 給予一個 Class 屬性
+function New_Class_Tag( ClassName, NewTagName, IdClass, IdClassName, i) {
+    // 指定在 框架（自訂） 內新增標籤 宣告變數
+    let BoxTag = document.getElementsByClassName(ClassName)[i];
+
+    // 新增標籤 宣告變數
+    let TagName = document.createElement(NewTagName);
+
+    // 在 框架 內新增 標籤
+    BoxTag.appendChild(TagName);
+
+    // 給予屬性
+    TagName.setAttribute(IdClass, IdClassName);
 }

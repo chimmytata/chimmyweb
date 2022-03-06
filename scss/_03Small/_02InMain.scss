@@ -119,21 +119,19 @@
     > #NewCommodity {
         // 將原本在TitleBox中的計算是搬到外面用
         // 計算式
-        $TW : $W1P *7 ;
-        $NW : $W1P *10 - $TW;
+        $TW: $W1P * 7;
+        $NW: $W1P * 10 - $TW;
 
-        $TFS : $Trem * 1.7;
-        $NFS : $Trem *1.1;
+        $TFS: $Trem * 1.7;
+        $NFS: $Trem * 1.1;
 
         // 背景圖
         background-image: url(../../img/BG/003.jpg);
 
-        
-
-        > h1{
-            width: $W1P *10;
+        > h1 {
+            width: $W1P * 10;
             // 文字尺寸
-            font-size: $Trem *1.5;
+            font-size: $Trem * 1.5;
 
             // 標題置中（文字置中）
             text-align: center;
@@ -142,7 +140,7 @@
             padding: {
                 top: 15px;
                 bottom: 15px;
-            };
+            }
         }
 
         > article {
@@ -165,10 +163,10 @@
                 // position: relative;
                 // 背景顏色
                 background-color: azure;
-    
+
                 // 陰影 x軸 y軸 模糊程度 顏色(透明度)
                 box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
-    
+
                 > #TitleBox {
                     // 寬度
                     width: $W1P * 8;
@@ -191,9 +189,7 @@
                     // .Clear {
                     //     clear: both;
                     // }
-                    
-    
-                    
+
                     > .Title {
                         width: $TW;
                         // 文字大小
@@ -211,12 +207,12 @@
                         }
                     }
                     > .Text {
-                        width: $W1P *10;
+                        width: $W1P * 10;
                         // 靠右對齊
                         text-align: right;
                     }
                 }
-                
+
                 > .Images {
                     // 寬度
                     width: $W1P * 8.5;
@@ -227,25 +223,25 @@
                     margin: {
                         bottom: 10px;
                     }
-                    // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px 
+                    // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px
                     // border-radius: 10px;
                     @include Rounded(15);
-                    
+
                     // 為了好看 先把背景顏色拿掉
                     // background-color: darksalmon;
-    
+
                     > a {
                         > img {
                             // 圖片邊框 線段的粗細(要加單位) 線段的樣式(實線) 線段的顏色
                             border: 2px solid rgb(73, 12, 12);
-    
+
                             // 圓角矩形
                             // border-radius: 15px;
                             @include Rounded(15);
                         }
                     }
                 }
-    
+
                 > .LName {
                     width: $W1P * 9;
                     // 彈性布局 橫向排版
@@ -253,11 +249,11 @@
                     // 外間距
                     margin: {
                         bottom: 15px;
-                    };
+                    }
                     background-color: cadetblue;
-    
+
                     > h3 {
-                        width: $TW +10;
+                        width: $TW + 10;
                         // 文字尺寸
                         font-size: $Trem * 1.4;
                     }
@@ -267,9 +263,8 @@
                         // list-style-type: none;
                         @include DNli;
                     }
-    
                 }
-    
+
                 > .Brief {
                     // 寬度
                     width: $W1P * 8.5;
@@ -281,9 +276,9 @@
                         bottom: 10px;
                     }
                 }
-    
+
                 > #PriceBox {
-                    // 寬度 
+                    // 寬度
                     width: $W1P * 9;
                     // 隱藏項目符號
                     @include DNli;
@@ -293,18 +288,17 @@
                     padding: {
                         bottom: 10px;
                     }
-                    
-    
+
                     > .OriginalPrice {
                         // 寬度
-                        width: $W1P *3.5;
+                        width: $W1P * 3.5;
                         // 文字尺寸
                         font-size: $Trem * 0.9;
                         // 內間距 OriginalPrice 與 BargainPrice 對齊
                         padding: {
                             top: $Trem * 0.3;
                         }
-    
+
                         > span {
                             // 價格與原價的前後距離
                             padding: {
@@ -315,13 +309,13 @@
                             color: blue;
                         }
                     }
-    
+
                     > .BargainPrice {
                         // 寬度
                         width: $W1P * 4.5;
                         // 文字尺寸
                         font-size: $Trem * 1.2;
-    
+
                         > span {
                             // em 或 rem 的尺寸，基於 根目錄 之下的值為基準
                             font-size: $Trem * 1.5;
@@ -336,10 +330,10 @@
                             font-weight: 600;
                         }
                     }
-    
-                    >.Car {
+
+                    > .Car {
                         // 寬度
-                        width: $W1P *2;
+                        width: $W1P * 2;
                     }
                 }
             }
@@ -383,21 +377,19 @@
     > #Share {
         // 將原本在TitleBox中的計算是搬到外面用
         // 計算式
-        $TW : $W1P *7 ;
-        $NW : $W1P *10 - $TW;
+        $TW: $W1P * 7;
+        $NW: $W1P * 10 - $TW;
 
-        $TFS : $Trem * 1.7;
-        $NFS : $Trem *1.1;
+        $TFS: $Trem * 1.7;
+        $NFS: $Trem * 1.1;
 
         // 背景圖
         background-image: url(../../img/BG/002.jpg);
 
-        
-
-        > h1{
-            width: $W1P *10;
+        > h1 {
+            width: $W1P * 10;
             // 文字尺寸
-            font-size: $Trem *1.5;
+            font-size: $Trem * 1.5;
 
             // 標題置中（文字置中）
             text-align: center;
@@ -406,7 +398,7 @@
             padding: {
                 top: 15px;
                 bottom: 15px;
-            };
+            }
         }
 
         > article {
@@ -418,7 +410,7 @@
             // 主軸心（水平） 靠左--預設值，可以不給
             // justify-content: flex-start;
 
-            > .SCommodity {
+            > .NCommodity {
                 // 寬度
                 width: $W1P * 4.5;
                 // 外間距
@@ -429,14 +421,14 @@
                 // position: relative;
                 // 背景顏色
                 background-color: azure;
-    
+
                 // 陰影 x軸 y軸 模糊程度 顏色(透明度)
                 box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
-    
+
                 > .Null {
                     height: 30px;
                 }
-                
+
                 > .Images {
                     // 寬度
                     width: $W1P * 8.5;
@@ -447,25 +439,25 @@
                     margin: {
                         bottom: 10px;
                     }
-                    // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px 
+                    // 圓角矩形 邊框設定轉角的角度 10px 再往上加 5px
                     // border-radius: 10px;
                     @include Rounded(15);
-                    
+
                     // 為了好看 先把背景顏色拿掉
                     // background-color: darksalmon;
-    
+
                     > a {
                         > img {
                             // 圖片邊框 線段的粗細(要加單位) 線段的樣式(實線) 線段的顏色
                             border: 2px solid rgb(73, 12, 12);
-    
+
                             // 圓角矩形
                             // border-radius: 15px;
                             @include Rounded(15);
                         }
                     }
                 }
-    
+
                 > .LName {
                     width: $W1P * 9;
                     // 彈性布局 橫向排版
@@ -473,11 +465,11 @@
                     // 外間距
                     margin: {
                         bottom: 15px;
-                    };
+                    }
                     background-color: cadetblue;
-    
+
                     > h3 {
-                        width: $TW +10;
+                        width: $TW + 10;
                         // 文字尺寸
                         font-size: $Trem * 1.4;
                     }
@@ -487,9 +479,8 @@
                         // list-style-type: none;
                         @include DNli;
                     }
-    
                 }
-    
+
                 > .Brief {
                     // 寬度
                     width: $W1P * 8.5;

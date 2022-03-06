@@ -381,26 +381,26 @@ $Lines(圖片的邊框粗細)
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  #Main > #Share > article > .SCommodity {
+  #Main > #Share > article > .NCommodity {
     width: 90%;
     margin-bottom: 20px;
     background-color: azure;
     -webkit-box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
   }
-  #Main > #Share > article > .SCommodity > .Null {
+  #Main > #Share > article > .NCommodity > .Null {
     height: 30px;
   }
-  #Main > #Share > article > .SCommodity > .Images {
+  #Main > #Share > article > .NCommodity > .Images {
     width: 90%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .Images > a > img {
+  #Main > #Share > article > .NCommodity > .Images > a > img {
     border: 2px solid #490c0c;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .LName {
+  #Main > #Share > article > .NCommodity > .LName {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -408,15 +408,15 @@ $Lines(圖片的邊框粗細)
     margin-bottom: 15px;
     background-color: cadetblue;
   }
-  #Main > #Share > article > .SCommodity > .LName > h3 {
+  #Main > #Share > article > .NCommodity > .LName > h3 {
     width: 80%;
     font-size: 1.4rem;
   }
-  #Main > #Share > article > .SCommodity > .LName > li {
+  #Main > #Share > article > .NCommodity > .LName > li {
     width: 30% 10;
     list-style: none;
   }
-  #Main > #Share > article > .SCommodity > .Brief {
+  #Main > #Share > article > .NCommodity > .Brief {
     width: 85%;
     text-align: justify;
     background-color: #bebd58;
@@ -742,26 +742,26 @@ $Lines(圖片的邊框粗細)
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  #Main > #Share > article > .SCommodity {
+  #Main > #Share > article > .NCommodity {
     width: 45%;
     margin-bottom: 20px;
     background-color: azure;
     -webkit-box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
   }
-  #Main > #Share > article > .SCommodity > .Null {
+  #Main > #Share > article > .NCommodity > .Null {
     height: 30px;
   }
-  #Main > #Share > article > .SCommodity > .Images {
+  #Main > #Share > article > .NCommodity > .Images {
     width: 85%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .Images > a > img {
+  #Main > #Share > article > .NCommodity > .Images > a > img {
     border: 2px solid #490c0c;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .LName {
+  #Main > #Share > article > .NCommodity > .LName {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -769,15 +769,15 @@ $Lines(圖片的邊框粗細)
     margin-bottom: 15px;
     background-color: cadetblue;
   }
-  #Main > #Share > article > .SCommodity > .LName > h3 {
+  #Main > #Share > article > .NCommodity > .LName > h3 {
     width: 80%;
     font-size: 1.4rem;
   }
-  #Main > #Share > article > .SCommodity > .LName > li {
+  #Main > #Share > article > .NCommodity > .LName > li {
     width: 30% 10;
     list-style: none;
   }
-  #Main > #Share > article > .SCommodity > .Brief {
+  #Main > #Share > article > .NCommodity > .Brief {
     width: 85%;
     text-align: justify;
     background-color: #bebd58;
@@ -1104,7 +1104,7 @@ $Lines(圖片的邊框粗細)
   #Main > #Share > article {
     width: 95%;
   }
-  #Main > #Share > article > .SCommodity {
+  #Main > #Share > article > .NCommodity {
     width: 30.33333%;
     margin-bottom: 20px;
     margin-left: 1.5%;
@@ -1113,19 +1113,19 @@ $Lines(圖片的邊框粗細)
     -webkit-box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
   }
-  #Main > #Share > article > .SCommodity > .Null {
+  #Main > #Share > article > .NCommodity > .Null {
     height: 30px;
   }
-  #Main > #Share > article > .SCommodity > .Images {
+  #Main > #Share > article > .NCommodity > .Images {
     width: 85%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .Images > a > img {
+  #Main > #Share > article > .NCommodity > .Images > a > img {
     border: 2px solid #490c0c;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .LName {
+  #Main > #Share > article > .NCommodity > .LName {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1133,15 +1133,15 @@ $Lines(圖片的邊框粗細)
     margin-bottom: 15px;
     background-color: cadetblue;
   }
-  #Main > #Share > article > .SCommodity > .LName > h3 {
+  #Main > #Share > article > .NCommodity > .LName > h3 {
     width: 80%;
     font-size: 1.4rem;
   }
-  #Main > #Share > article > .SCommodity > .LName > li {
+  #Main > #Share > article > .NCommodity > .LName > li {
     width: 30% 10;
     list-style: none;
   }
-  #Main > #Share > article > .SCommodity > .Brief {
+  #Main > #Share > article > .NCommodity > .Brief {
     width: 85%;
     text-align: justify;
     background-color: #bebd58;
@@ -1391,7 +1391,7 @@ $Lines(圖片的邊框粗細)
   #Main > #Share > article {
     width: 80%;
   }
-  #Main > #Share > article > .SCommodity {
+  #Main > #Share > article > .NCommodity {
     width: 24%;
     margin-bottom: 20px;
     margin-left: 0.5%;
@@ -1400,19 +1400,19 @@ $Lines(圖片的邊框粗細)
     -webkit-box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 8px rgba(0, 0, 0, 0.25);
   }
-  #Main > #Share > article > .SCommodity > .Null {
+  #Main > #Share > article > .NCommodity > .Null {
     height: 30px;
   }
-  #Main > #Share > article > .SCommodity > .Images {
+  #Main > #Share > article > .NCommodity > .Images {
     width: 90%;
     margin-bottom: 10px;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .Images > a > img {
+  #Main > #Share > article > .NCommodity > .Images > a > img {
     border: 2px solid #490c0c;
     border-radius: 15px;
   }
-  #Main > #Share > article > .SCommodity > .LName {
+  #Main > #Share > article > .NCommodity > .LName {
     width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1420,15 +1420,15 @@ $Lines(圖片的邊框粗細)
     margin-bottom: 15px;
     background-color: cadetblue;
   }
-  #Main > #Share > article > .SCommodity > .LName > h3 {
+  #Main > #Share > article > .NCommodity > .LName > h3 {
     width: 80%;
     font-size: 1.4rem;
   }
-  #Main > #Share > article > .SCommodity > .LName > li {
+  #Main > #Share > article > .NCommodity > .LName > li {
     width: 30% 10;
     list-style: none;
   }
-  #Main > #Share > article > .SCommodity > .Brief {
+  #Main > #Share > article > .NCommodity > .Brief {
     width: 85%;
     text-align: justify;
     background-color: #bebd58;
