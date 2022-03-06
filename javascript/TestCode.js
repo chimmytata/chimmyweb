@@ -240,109 +240,28 @@ sec.setAttribute("id",CommID[i]);
 
 
 
-// 設計迴圈
-// li 在 TitleBox 框架內產生，宣告 TitleBox 的變數
-let TB = document.getElementById('TitleBox');
-
-// 宣告 li 的 class 名稱 array（陣列）
-let LiClass = ['Title','Number','Text'];
-
-// 宣告 li 的內容
-let LiCon = ['新品上市','庫存','數量有限，售完為止'];
 
 ForLi(LiClass, TB, LiCon);
-// for 迴圈
-/*for(let i = 0;i<LiClass.length;i++) {
-    // 建立 li
-    let li = document.createElement('li');
 
-    // 在 TitleBox （宣告在 137 行 TB）
-    TB.appendChild(li);
 
-    // 新增 class 屬性
-    li.setAttribute("class",LiClass[i]);
-
-    // 置入 內容
-    li.innerText = LiCon[i];
-}*/
-
-// 建立 class 的變數
-// let Number = TB.getElementsByClassName('Number')[0];
-// querySelector() 在文件中匹配指定 css 選擇器
-// let Number = document.querySelector('.Number');
-let Number = TB.querySelector('.Number');
-
-// 建立 span 標籤
-let SP = document.createElement('span');
-
-// 在 Number 建立 span
-Number.appendChild(SP);
-
-SP.innerText = '1';
-/* ============================================================== */
-
-// 設定 div class 名稱陣列
-let DClass = ['Images','LName','Brief'];
-
-for(let i =0;i<DClass.length;i++) {
-    // 新增 div 的框架，宣告變數
-    let Div = document.createElement('div');
-
-    // 在 NCommodity（宣告在 127 行）
-    CO.appendChild(Div);
-
-    // 新增屬性
-    Div.setAttribute("class",DClass[i]);
-}
-
-// Images 內新增資料
-let A = document.createElement('a');
-// 新增 連結 屬性
-A.setAttribute("href","javascript:;");
-// 宣告 指定 class 的變數
-let Images = CO.querySelector('.Images');
-// 在 Images 內新增
-Images.appendChild(A);
-
-// Images > a 內新增資料
-let Img = document.createElement('img');
-// 給予 屬性
-Img.setAttribute("src","img/Merchandise/001.jpg");
-// 在 a 內新增
-A.appendChild(Img);
-
-// 在 LName 新增資料 h3 li
-let H3 = document.createElement('h3');
-let Li = document.createElement('li');
-// 屬性
-Li.setAttribute("class","Love");
-// 在 LName 新增；CO 在 NCommodity（宣告在 127 行）
-let LName = CO.querySelector('.LName');
-LName.appendChild(H3).innerText = "商品名稱";
-LName.appendChild(Li).innerText = "我的最愛";
-
-// 在 Brief 內新增 html 資料；CO 在 NCommodity（宣告在 127 行）
-let Brief = CO.querySelector('.Brief');
-Brief.innerHTML = "商品簡介，文字字數超過26個字數( <mark>英文與阿拉伯數字為26個字數，中文為13格字數</mark>)，會利用......設計";
 
 /* ============================================================== */
-//  在 價格 PriceBox 新增資料
-// 新增標籤 ul ;前面有宣告了，所以就不用 let
-ul = document.createElement('ul');
+
+
+
+
+
+
+
 
 // 在 NCommodity 內新增 ul ;前面有宣告了，所以就不用 let
 // CO = document.querySelector('.NCommodity');
 CO = document.getElementById(CommID[i]);
-ul.setAttribute("id","PriceBox");
-// 建立 ul 
-CO.appendChild(ul);
+
+
 
 // 參考 127行
-let PriceBox = document.getElementById('PriceBox');
-// 陣列 class
-let PBLi = ['OriginalPrice','BargainPrice','Car'];
-// 內容
-let PBLiCon = ['原價<span><s>1,000</s></span>元','特價<span>800</span>元','購物車'];
+
 ForLi(PBLi, PriceBox, PBLiCon);
 
 /* ============================================================== */
