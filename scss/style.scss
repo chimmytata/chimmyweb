@@ -1,4 +1,5 @@
 // 匯入檔案 @import
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import "_01Joint.scss";
 
 // RWD 利用媒體判斷來區分顯示裝置尺寸
@@ -7,12 +8,14 @@
     // 匯入檔案 @import
     @import "_02Esmall/01index";
     @import "_02Esmall/02InMain";
+    @import "_02Esmall/03Pagination";
 }
 
 // 小裝置 >=576px Small min-width（最大寬度 含等於）
 @media screen and (min-width: 576px) {
     @import "_03Small/01index";
     @import "_03Small/02InMain";
+    @import "_03Small/03Pagination";
 }
 
 // 平板裝置 >=768px Medium min-width（最大寬度 含等於）IPAD

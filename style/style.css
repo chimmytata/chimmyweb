@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 * {
   margin: 0 auto;
   padding: 0;
@@ -439,6 +440,24 @@ $Lines(圖片的邊框粗細)
     color: white;
     border-radius: 20px;
   }
+  #Main > #NewCommodity #Pagination {
+    width: 90%;
+    height: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  #Main > #NewCommodity #Pagination .bar-left {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 45px;
+    text-align: center;
+    color: antiquewhite;
+    background-color: #754507;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -799,6 +818,24 @@ $Lines(圖片的邊框粗細)
     text-decoration: none;
     color: white;
     border-radius: 20px;
+  }
+  #Main > #NewCommodity #Pagination {
+    width: 385px;
+    height: 55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  #Main > #NewCommodity #Pagination .bar-left {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 45px;
+    text-align: center;
+    color: antiquewhite;
+    background-color: #754507;
   }
 }
 
