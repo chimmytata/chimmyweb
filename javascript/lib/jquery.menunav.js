@@ -1,5 +1,3 @@
-PhoneMenushow2 ();
-
 function PhoneMenushow2 () {
     // $ jQuery 的變數前綴詞
     // 隱藏選單
