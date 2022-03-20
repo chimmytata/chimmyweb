@@ -1,6 +1,6 @@
-define(["jquery", "jquery.menunav"], function($) {
+define(["jquery", "jquery.menunav", "copyright"], function($) {
     //the jquery.alpha.js and jquery.beta.js plugins have been loaded.
     $(function() {
-        $('body').menunav();
+        $('body').menunav().copyright();
     });
 });
