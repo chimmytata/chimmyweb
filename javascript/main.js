@@ -1,3 +1,5 @@
+// import 'bin/jquery-3.6.0.js';
+
 // MenuNav();
 // 行動裝置 選單
 function MenuNav () {
